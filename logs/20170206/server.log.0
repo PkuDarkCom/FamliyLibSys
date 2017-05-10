@@ -1,0 +1,506 @@
+2017-02-06 10:12:00.958||INFO -[Starting SpringBootDemoApplication on bogon with PID 33459 (/Users/xiaowan/Documents/studyspace/SpringBootDemo/target/classes started by xiaowan in /Users/xiaowan/Documents/studyspace/SpringBootDemo)]-[com.ch.SpringBootDemoApplication]-[main]
+2017-02-06 10:12:00.968||INFO -[No active profile set, falling back to default profiles: default]-[com.ch.SpringBootDemoApplication]-[main]
+2017-02-06 10:12:01.028||INFO -[Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@615091b8: startup date [Mon Feb 06 10:12:01 CST 2017]; root of context hierarchy]-[o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext]-[main]
+2017-02-06 10:12:01.104||INFO -[HV000001: Hibernate Validator 5.2.4.Final]-[o.h.validator.internal.util.Version]-[background-preinit]
+2017-02-06 10:12:01.559||INFO -[Loading XML bean definitions from class path resource [application-context.xml]]-[o.s.b.f.xml.XmlBeanDefinitionReader]-[main]
+2017-02-06 10:12:01.761||INFO -[Loading XML bean definitions from class path resource [threadPool.xml]]-[o.s.b.f.xml.XmlBeanDefinitionReader]-[main]
+2017-02-06 10:12:01.923||INFO -[Overriding bean definition for bean 'org.springframework.transaction.config.internalTransactionAdvisor' with a different definition: replacing [Root bean: class [org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration; factoryMethodName=transactionAdvisor; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/transaction/annotation/ProxyTransactionManagementConfiguration.class]]]-[o.s.b.f.s.DefaultListableBeanFactory]-[main]
+2017-02-06 10:12:01.924||INFO -[Skipping bean definition for [BeanMethod:name=transactionalEventListenerFactory,declaringClass=org.springframework.transaction.annotation.AbstractTransactionManagementConfiguration]: a definition for bean 'org.springframework.transaction.config.internalTransactionalEventListenerFactory' already exists. This top-level bean definition is considered as an override.]-[o.s.c.a.ConfigurationClassBeanDefinitionReader]-[main]
+2017-02-06 10:12:02.151||INFO -[Loading properties file from class path resource [config.properties]]-[o.s.c.s.PropertySourcesPlaceholderConfigurer]-[main]
+2017-02-06 10:12:02.255||INFO -[Bean 'dataSource' of type [class org.logicalcobwebs.proxool.ProxoolDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-02-06 10:12:02.337||INFO -[Bean 'sqlSessionFactory' of type [class org.mybatis.spring.SqlSessionFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-02-06 10:12:02.337||INFO -[Bean 'sqlSessionFactory' of type [class org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-02-06 10:12:02.400||INFO -[Bean 'tradeDataMapper' of type [class org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-02-06 10:12:02.423||INFO -[Bean 'systemLogMapper' of type [class org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-02-06 10:12:02.464||INFO -[Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$21cf8a8c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-02-06 10:12:02.889||INFO -[Tomcat initialized with port(s): 8080 (http)]-[o.s.b.c.e.t.TomcatEmbeddedServletContainer]-[main]
+2017-02-06 10:12:02.908||INFO -[Starting service Tomcat]-[o.a.catalina.core.StandardService]-[main]
+2017-02-06 10:12:02.909||INFO -[Starting Servlet Engine: Apache Tomcat/8.5.5]-[o.a.catalina.core.StandardEngine]-[main]
+2017-02-06 10:12:03.145||INFO -[At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.]-[o.apache.jasper.servlet.TldScanner]-[localhost-startStop-1]
+2017-02-06 10:12:03.150||INFO -[Initializing Spring embedded WebApplicationContext]-[o.a.c.c.C.[Tomcat].[localhost].[/]]-[localhost-startStop-1]
+2017-02-06 10:12:03.150||INFO -[Root WebApplicationContext: initialization completed in 2122 ms]-[o.s.web.context.ContextLoader]-[localhost-startStop-1]
+2017-02-06 10:12:03.304||INFO -[Mapping servlet: 'dispatcherServlet' to [/]]-[o.s.b.w.s.ServletRegistrationBean]-[localhost-startStop-1]
+2017-02-06 10:12:03.308||INFO -[Mapping filter: 'characterEncodingFilter' to: [/*]]-[o.s.b.w.s.FilterRegistrationBean]-[localhost-startStop-1]
+2017-02-06 10:12:03.309||INFO -[Mapping filter: 'hiddenHttpMethodFilter' to: [/*]]-[o.s.b.w.s.FilterRegistrationBean]-[localhost-startStop-1]
+2017-02-06 10:12:03.309||INFO -[Mapping filter: 'httpPutFormContentFilter' to: [/*]]-[o.s.b.w.s.FilterRegistrationBean]-[localhost-startStop-1]
+2017-02-06 10:12:03.309||INFO -[Mapping filter: 'requestContextFilter' to: [/*]]-[o.s.b.w.s.FilterRegistrationBean]-[localhost-startStop-1]
+2017-02-06 10:12:03.401||INFO -[Initializing ExecutorService  'threadPoolTaskExecutor']-[o.s.s.c.ThreadPoolTaskExecutor]-[main]
+2017-02-06 10:12:03.643||INFO -[Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@615091b8: startup date [Mon Feb 06 10:12:01 CST 2017]; root of context hierarchy]-[o.s.w.s.m.m.a.RequestMappingHandlerAdapter]-[main]
+2017-02-06 10:12:03.721||INFO -[Mapped "{[/login/checkLogin]}" onto public com.ch.utils.StatusJSON com.ch.controller.LoginController.checkLogin(javax.servlet.http.HttpSession,java.lang.String,java.lang.String)]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-02-06 10:12:03.722||INFO -[Mapped "{[/login/login]}" onto public java.lang.String com.ch.controller.LoginController.login()]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-02-06 10:12:03.723||INFO -[Mapped "{[/trade/tradedata]}" onto public java.lang.String com.ch.controller.TradeDataController.tradedata(org.springframework.ui.ModelMap)]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-02-06 10:12:03.723||INFO -[Mapped "{[/trade/trade]}" onto public java.lang.String com.ch.controller.TradeDataController.trade()]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-02-06 10:12:03.724||INFO -[Mapped "{[/userController/testAOP]}" onto public void com.ch.controller.UserController.testAOP(java.lang.String,java.lang.String)]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-02-06 10:12:03.726||INFO -[Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-02-06 10:12:03.727||INFO -[Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-02-06 10:12:03.773||INFO -[Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]-[o.s.w.s.h.SimpleUrlHandlerMapping]-[main]
+2017-02-06 10:12:03.773||INFO -[Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]-[o.s.w.s.h.SimpleUrlHandlerMapping]-[main]
+2017-02-06 10:12:03.821||INFO -[Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]-[o.s.w.s.h.SimpleUrlHandlerMapping]-[main]
+2017-02-06 10:12:04.286||INFO -[Registering beans for JMX exposure on startup]-[o.s.j.e.a.AnnotationMBeanExporter]-[main]
+2017-02-06 10:12:04.304||INFO -[Initializing ProtocolHandler ["http-nio-8080"]]-[o.a.coyote.http11.Http11NioProtocol]-[main]
+2017-02-06 10:12:04.317||INFO -[Starting ProtocolHandler [http-nio-8080]]-[o.a.coyote.http11.Http11NioProtocol]-[main]
+2017-02-06 10:12:04.336||INFO -[Using a shared selector for servlet write/read]-[o.a.tomcat.util.net.NioSelectorPool]-[main]
+2017-02-06 10:12:04.367||INFO -[Tomcat started on port(s): 8080 (http)]-[o.s.b.c.e.t.TomcatEmbeddedServletContainer]-[main]
+2017-02-06 10:12:04.374||INFO -[Started SpringBootDemoApplication in 3.847 seconds (JVM running for 4.499)]-[com.ch.SpringBootDemoApplication]-[main]
+2017-02-06 10:12:16.238||INFO -[Initializing Spring FrameworkServlet 'dispatcherServlet']-[o.a.c.c.C.[Tomcat].[localhost].[/]]-[http-nio-8080-exec-2]
+2017-02-06 10:12:16.238||INFO -[FrameworkServlet 'dispatcherServlet': initialization started]-[o.s.web.servlet.DispatcherServlet]-[http-nio-8080-exec-2]
+2017-02-06 10:12:16.257||INFO -[FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms]-[o.s.web.servlet.DispatcherServlet]-[http-nio-8080-exec-2]
+2017-02-06 10:31:55.287||WARN -[#0001 was active for 320878 milliseconds and has been removed automaticaly. The Thread responsible was named 'http-nio-8080-exec-8', but the last SQL it performed is unknown because the trace property is not enabled.]-[org.logicalcobwebs.proxool.null]-[HouseKeeper]
+2017-02-06 10:31:55.298||INFO -[Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]]-[o.s.b.f.xml.XmlBeanDefinitionReader]-[http-nio-8080-exec-8]
+2017-02-06 10:31:55.331||INFO -[SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]]-[o.s.j.support.SQLErrorCodesFactory]-[http-nio-8080-exec-8]
+2017-02-06 10:31:55.339||ERROR-[Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.RecoverableDataAccessException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 1,164,136 milliseconds ago.  The last packet sent successfully to the server was 410,679 milliseconds ago.
+### The error may exist in com/ch/dao/TradeDataMapper.xml
+### The error may involve com.ch.dao.TradeDataMapper.queryTradeDataList-Inline
+### The error occurred while setting parameters
+### SQL: SELECT     a.trader_id as traderId,    b.trader_name as traderName,    a.symbol as symbol,    a.order_status orderStatus,    a.order_status2 orderStatus2,    a.open_price as openPrice,    a.close_price as closePrice,    a.tp as tp,    a.sl as sl,    a.profit as profit,    a.open_time as openTime,    a.close_time as closeTime    FROM  ORDER_DATA a    LEFT JOIN    TRADER_DATA b    on a.trader_id = b.uid    ORDER BY  state ASC,open_time DESC;
+### Cause: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 1,164,136 milliseconds ago.  The last packet sent successfully to the server was 410,679 milliseconds ago.
+; SQL []; Communications link failure
+
+The last packet successfully received from the server was 1,164,136 milliseconds ago.  The last packet sent successfully to the server was 410,679 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 1,164,136 milliseconds ago.  The last packet sent successfully to the server was 410,679 milliseconds ago.] with root cause]-[o.a.c.c.C.[.[.[.[dispatcherServlet]]-[http-nio-8080-exec-8]
+java.net.SocketException: Operation timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:150)
+	at java.net.SocketInputStream.read(SocketInputStream.java:121)
+	at com.mysql.jdbc.util.ReadAheadInputStream.fill(ReadAheadInputStream.java:100)
+	at com.mysql.jdbc.util.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:143)
+	at com.mysql.jdbc.util.ReadAheadInputStream.read(ReadAheadInputStream.java:173)
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2954)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3375)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.logicalcobwebs.proxool.ProxyStatement.invoke(ProxyStatement.java:100)
+	at org.logicalcobwebs.proxool.ProxyStatement.intercept(ProxyStatement.java:57)
+	at $java.sql.PreparedStatement$$EnhancerByProxool$$1db8b60b.execute(<generated>)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:62)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:78)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:303)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:154)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:102)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:82)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:120)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:113)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:386)
+	at com.sun.proxy.$Proxy42.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:205)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:122)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:64)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53)
+	at com.sun.proxy.$Proxy60.queryTradeDataList(Unknown Source)
+	at com.ch.service.impl.TradeDataServiceImpl.queryTradeDataList(TradeDataServiceImpl.java:21)
+	at com.ch.controller.TradeDataController.tradedata(TradeDataController.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:114)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:87)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2017-02-06 10:43:31.894||ERROR-[Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.RecoverableDataAccessException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 1,005,991 milliseconds ago.  The last packet sent successfully to the server was 57,817 milliseconds ago.
+### The error may exist in com/ch/dao/TradeDataMapper.xml
+### The error may involve com.ch.dao.TradeDataMapper.queryTradeDataList-Inline
+### The error occurred while setting parameters
+### SQL: SELECT     a.trader_id as traderId,    b.trader_name as traderName,    a.symbol as symbol,    a.order_status orderStatus,    a.order_status2 orderStatus2,    a.open_price as openPrice,    a.close_price as closePrice,    a.tp as tp,    a.sl as sl,    a.profit as profit,    a.open_time as openTime,    a.close_time as closeTime    FROM  ORDER_DATA a    LEFT JOIN    TRADER_DATA b    on a.trader_id = b.uid    ORDER BY  state ASC,open_time DESC;
+### Cause: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 1,005,991 milliseconds ago.  The last packet sent successfully to the server was 57,817 milliseconds ago.
+; SQL []; Communications link failure
+
+The last packet successfully received from the server was 1,005,991 milliseconds ago.  The last packet sent successfully to the server was 57,817 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 1,005,991 milliseconds ago.  The last packet sent successfully to the server was 57,817 milliseconds ago.] with root cause]-[o.a.c.c.C.[.[.[.[dispatcherServlet]]-[http-nio-8080-exec-2]
+java.net.SocketException: Operation timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:150)
+	at java.net.SocketInputStream.read(SocketInputStream.java:121)
+	at com.mysql.jdbc.util.ReadAheadInputStream.fill(ReadAheadInputStream.java:100)
+	at com.mysql.jdbc.util.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:143)
+	at com.mysql.jdbc.util.ReadAheadInputStream.read(ReadAheadInputStream.java:173)
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2954)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3375)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.logicalcobwebs.proxool.ProxyStatement.invoke(ProxyStatement.java:100)
+	at org.logicalcobwebs.proxool.ProxyStatement.intercept(ProxyStatement.java:57)
+	at $java.sql.PreparedStatement$$EnhancerByProxool$$1db8b60b.execute(<generated>)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:62)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:78)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:303)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:154)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:102)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:82)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:120)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:113)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:386)
+	at com.sun.proxy.$Proxy42.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:205)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:122)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:64)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53)
+	at com.sun.proxy.$Proxy60.queryTradeDataList(Unknown Source)
+	at com.ch.service.impl.TradeDataServiceImpl.queryTradeDataList(TradeDataServiceImpl.java:21)
+	at com.ch.controller.TradeDataController.tradedata(TradeDataController.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:114)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:87)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2017-02-06 10:47:55.783||WARN -[#0002 was active for 321710 milliseconds and has been removed automaticaly. The Thread responsible was named 'http-nio-8080-exec-2', but the last SQL it performed is unknown because the trace property is not enabled.]-[org.logicalcobwebs.proxool.null]-[HouseKeeper]
+2017-02-06 10:53:39.372||INFO -[Starting SpringBootDemoApplication on bogon with PID 33537 (/Users/xiaowan/Documents/studyspace/SpringBootDemo/target/classes started by xiaowan in /Users/xiaowan/Documents/studyspace/SpringBootDemo)]-[com.ch.SpringBootDemoApplication]-[main]
+2017-02-06 10:53:39.375||INFO -[No active profile set, falling back to default profiles: default]-[com.ch.SpringBootDemoApplication]-[main]
+2017-02-06 10:53:39.429||INFO -[Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@41a2befb: startup date [Mon Feb 06 10:53:39 CST 2017]; root of context hierarchy]-[o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext]-[main]
+2017-02-06 10:53:39.510||INFO -[HV000001: Hibernate Validator 5.2.4.Final]-[o.h.validator.internal.util.Version]-[background-preinit]
+2017-02-06 10:53:39.885||INFO -[Loading XML bean definitions from class path resource [application-context.xml]]-[o.s.b.f.xml.XmlBeanDefinitionReader]-[main]
+2017-02-06 10:53:40.056||INFO -[Loading XML bean definitions from class path resource [threadPool.xml]]-[o.s.b.f.xml.XmlBeanDefinitionReader]-[main]
+2017-02-06 10:53:40.164||INFO -[Overriding bean definition for bean 'org.springframework.transaction.config.internalTransactionAdvisor' with a different definition: replacing [Root bean: class [org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration; factoryMethodName=transactionAdvisor; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/transaction/annotation/ProxyTransactionManagementConfiguration.class]]]-[o.s.b.f.s.DefaultListableBeanFactory]-[main]
+2017-02-06 10:53:40.165||INFO -[Skipping bean definition for [BeanMethod:name=transactionalEventListenerFactory,declaringClass=org.springframework.transaction.annotation.AbstractTransactionManagementConfiguration]: a definition for bean 'org.springframework.transaction.config.internalTransactionalEventListenerFactory' already exists. This top-level bean definition is considered as an override.]-[o.s.c.a.ConfigurationClassBeanDefinitionReader]-[main]
+2017-02-06 10:53:40.351||INFO -[Loading properties file from class path resource [config.properties]]-[o.s.c.s.PropertySourcesPlaceholderConfigurer]-[main]
+2017-02-06 10:53:40.446||INFO -[Bean 'dataSource' of type [class org.logicalcobwebs.proxool.ProxoolDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-02-06 10:53:40.520||INFO -[Bean 'sqlSessionFactory' of type [class org.mybatis.spring.SqlSessionFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-02-06 10:53:40.520||INFO -[Bean 'sqlSessionFactory' of type [class org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-02-06 10:53:40.583||INFO -[Bean 'tradeDataMapper' of type [class org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-02-06 10:53:40.601||INFO -[Bean 'systemLogMapper' of type [class org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-02-06 10:53:40.637||INFO -[Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e86cac70] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-02-06 10:53:40.984||INFO -[Tomcat initialized with port(s): 8080 (http)]-[o.s.b.c.e.t.TomcatEmbeddedServletContainer]-[main]
+2017-02-06 10:53:40.996||INFO -[Starting service Tomcat]-[o.a.catalina.core.StandardService]-[main]
+2017-02-06 10:53:40.997||INFO -[Starting Servlet Engine: Apache Tomcat/8.5.5]-[o.a.catalina.core.StandardEngine]-[main]
+2017-02-06 10:53:41.222||INFO -[At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.]-[o.apache.jasper.servlet.TldScanner]-[localhost-startStop-1]
+2017-02-06 10:53:41.228||INFO -[Initializing Spring embedded WebApplicationContext]-[o.a.c.c.C.[Tomcat].[localhost].[/]]-[localhost-startStop-1]
+2017-02-06 10:53:41.228||INFO -[Root WebApplicationContext: initialization completed in 1799 ms]-[o.s.web.context.ContextLoader]-[localhost-startStop-1]
+2017-02-06 10:53:41.364||INFO -[Mapping servlet: 'dispatcherServlet' to [/]]-[o.s.b.w.s.ServletRegistrationBean]-[localhost-startStop-1]
+2017-02-06 10:53:41.368||INFO -[Mapping filter: 'characterEncodingFilter' to: [/*]]-[o.s.b.w.s.FilterRegistrationBean]-[localhost-startStop-1]
+2017-02-06 10:53:41.369||INFO -[Mapping filter: 'hiddenHttpMethodFilter' to: [/*]]-[o.s.b.w.s.FilterRegistrationBean]-[localhost-startStop-1]
+2017-02-06 10:53:41.369||INFO -[Mapping filter: 'httpPutFormContentFilter' to: [/*]]-[o.s.b.w.s.FilterRegistrationBean]-[localhost-startStop-1]
+2017-02-06 10:53:41.369||INFO -[Mapping filter: 'requestContextFilter' to: [/*]]-[o.s.b.w.s.FilterRegistrationBean]-[localhost-startStop-1]
+2017-02-06 10:53:41.437||INFO -[Initializing ExecutorService  'threadPoolTaskExecutor']-[o.s.s.c.ThreadPoolTaskExecutor]-[main]
+2017-02-06 10:53:41.615||INFO -[Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@41a2befb: startup date [Mon Feb 06 10:53:39 CST 2017]; root of context hierarchy]-[o.s.w.s.m.m.a.RequestMappingHandlerAdapter]-[main]
+2017-02-06 10:53:41.673||INFO -[Mapped "{[/login/login]}" onto public java.lang.String com.ch.controller.LoginController.login()]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-02-06 10:53:41.673||INFO -[Mapped "{[/login/checkLogin]}" onto public com.ch.utils.StatusJSON com.ch.controller.LoginController.checkLogin(javax.servlet.http.HttpSession,java.lang.String,java.lang.String)]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-02-06 10:53:41.674||INFO -[Mapped "{[/trade/tradedata]}" onto public java.lang.String com.ch.controller.TradeDataController.tradedata(org.springframework.ui.ModelMap)]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-02-06 10:53:41.675||INFO -[Mapped "{[/trade/trade]}" onto public java.lang.String com.ch.controller.TradeDataController.trade()]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-02-06 10:53:41.675||INFO -[Mapped "{[/userController/testAOP]}" onto public void com.ch.controller.UserController.testAOP(java.lang.String,java.lang.String)]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-02-06 10:53:41.677||INFO -[Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-02-06 10:53:41.677||INFO -[Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-02-06 10:53:41.704||INFO -[Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]-[o.s.w.s.h.SimpleUrlHandlerMapping]-[main]
+2017-02-06 10:53:41.704||INFO -[Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]-[o.s.w.s.h.SimpleUrlHandlerMapping]-[main]
+2017-02-06 10:53:41.741||INFO -[Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]-[o.s.w.s.h.SimpleUrlHandlerMapping]-[main]
+2017-02-06 10:53:41.941||INFO -[Registering beans for JMX exposure on startup]-[o.s.j.e.a.AnnotationMBeanExporter]-[main]
+2017-02-06 10:53:41.957||INFO -[Initializing ProtocolHandler ["http-nio-8080"]]-[o.a.coyote.http11.Http11NioProtocol]-[main]
+2017-02-06 10:53:41.968||INFO -[Starting ProtocolHandler [http-nio-8080]]-[o.a.coyote.http11.Http11NioProtocol]-[main]
+2017-02-06 10:53:42.078||INFO -[Using a shared selector for servlet write/read]-[o.a.tomcat.util.net.NioSelectorPool]-[main]
+2017-02-06 10:53:42.104||INFO -[Tomcat started on port(s): 8080 (http)]-[o.s.b.c.e.t.TomcatEmbeddedServletContainer]-[main]
+2017-02-06 10:53:42.107||INFO -[Started SpringBootDemoApplication in 3.101 seconds (JVM running for 3.574)]-[com.ch.SpringBootDemoApplication]-[main]
+2017-02-06 10:53:49.180||INFO -[Initializing Spring FrameworkServlet 'dispatcherServlet']-[o.a.c.c.C.[Tomcat].[localhost].[/]]-[http-nio-8080-exec-1]
+2017-02-06 10:53:49.180||INFO -[FrameworkServlet 'dispatcherServlet': initialization started]-[o.s.web.servlet.DispatcherServlet]-[http-nio-8080-exec-1]
+2017-02-06 10:53:49.193||INFO -[FrameworkServlet 'dispatcherServlet': initialization completed in 13 ms]-[o.s.web.servlet.DispatcherServlet]-[http-nio-8080-exec-1]
+2017-02-06 11:36:21.132||INFO -[Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]]-[o.s.b.f.xml.XmlBeanDefinitionReader]-[http-nio-8080-exec-8]
+2017-02-06 11:36:21.158||INFO -[SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]]-[o.s.j.support.SQLErrorCodesFactory]-[http-nio-8080-exec-8]
+2017-02-06 11:36:22.786||ERROR-[Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.RecoverableDataAccessException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 2,548,259 milliseconds ago.  The last packet sent successfully to the server was 36,940 milliseconds ago.
+### The error may exist in com/ch/dao/TradeDataMapper.xml
+### The error may involve com.ch.dao.TradeDataMapper.queryTradeDataList-Inline
+### The error occurred while setting parameters
+### SQL: SELECT     a.trader_id as traderId,    b.trader_name as traderName,    a.symbol as symbol,    a.order_status orderStatus,    a.order_status2 orderStatus2,    a.open_price as openPrice,    a.close_price as closePrice,    a.tp as tp,    a.sl as sl,    a.profit as profit,    a.open_time as openTime,    a.close_time as closeTime    FROM  ORDER_DATA a    LEFT JOIN    TRADER_DATA b    on a.trader_id = b.uid    ORDER BY  state ASC,open_time DESC;
+### Cause: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 2,548,259 milliseconds ago.  The last packet sent successfully to the server was 36,940 milliseconds ago.
+; SQL []; Communications link failure
+
+The last packet successfully received from the server was 2,548,259 milliseconds ago.  The last packet sent successfully to the server was 36,940 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 2,548,259 milliseconds ago.  The last packet sent successfully to the server was 36,940 milliseconds ago.] with root cause]-[o.a.c.c.C.[.[.[.[dispatcherServlet]]-[http-nio-8080-exec-8]
+java.net.SocketException: Operation timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:150)
+	at java.net.SocketInputStream.read(SocketInputStream.java:121)
+	at com.mysql.jdbc.util.ReadAheadInputStream.fill(ReadAheadInputStream.java:100)
+	at com.mysql.jdbc.util.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:143)
+	at com.mysql.jdbc.util.ReadAheadInputStream.read(ReadAheadInputStream.java:173)
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2954)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3375)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.logicalcobwebs.proxool.ProxyStatement.invoke(ProxyStatement.java:100)
+	at org.logicalcobwebs.proxool.ProxyStatement.intercept(ProxyStatement.java:57)
+	at $java.sql.Statement$$EnhancerByProxool$$44273d88.execute(<generated>)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:62)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:78)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:303)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:154)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:102)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:82)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:120)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:113)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:386)
+	at com.sun.proxy.$Proxy42.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:205)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:122)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:64)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53)
+	at com.sun.proxy.$Proxy60.queryTradeDataList(Unknown Source)
+	at com.ch.service.impl.TradeDataServiceImpl.queryTradeDataList(TradeDataServiceImpl.java:21)
+	at com.ch.controller.TradeDataController.tradedata(TradeDataController.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:114)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:87)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2017-02-06 11:36:34.185||INFO -[Shutting down 'null' pool immediately [Shutdown Hook]]-[org.logicalcobwebs.proxool.null]-[Shutdown Hook]
+2017-02-06 11:36:34.185||INFO -[Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@41a2befb: startup date [Mon Feb 06 10:53:39 CST 2017]; root of context hierarchy]-[o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext]-[Thread-2]
+2017-02-06 11:36:34.185||INFO -[Waiting until Mon Feb 06 11:36:34 CST 2017 for all connections to become inactive (active count is 1).]-[o.l.proxool.ConnectionPool]-[Shutdown Hook]
+2017-02-06 11:36:34.185||WARN -[Shutdown waited for 0 milliseconds for all the connections to become inactive but the active count is still 1. Shutting down anyway.]-[o.l.proxool.ConnectionPool]-[Shutdown Hook]
+2017-02-06 11:36:34.186||INFO -[Stopping Prototyper thread]-[o.l.proxool.PrototyperController]-[Shutdown Hook]
+2017-02-06 11:36:34.187||INFO -[Stopping HouseKeeper thread]-[o.l.proxool.HouseKeeperController]-[Shutdown Hook]
+2017-02-06 11:36:34.187||INFO -[Unregistering JMX-exposed beans on shutdown]-[o.s.j.e.a.AnnotationMBeanExporter]-[Thread-2]
+2017-02-06 11:36:34.187||INFO -[Shutting down ExecutorService 'threadPoolTaskExecutor']-[o.s.s.c.ThreadPoolTaskExecutor]-[Thread-2]
+2017-02-06 11:36:55.691||INFO -[Starting SpringBootDemoApplication on bogon with PID 33657 (/Users/xiaowan/Documents/studyspace/SpringBootDemo/target/classes started by xiaowan in /Users/xiaowan/Documents/studyspace/SpringBootDemo)]-[com.ch.SpringBootDemoApplication]-[main]
+2017-02-06 11:36:55.694||INFO -[No active profile set, falling back to default profiles: default]-[com.ch.SpringBootDemoApplication]-[main]
+2017-02-06 11:36:55.751||INFO -[Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@41a2befb: startup date [Mon Feb 06 11:36:55 CST 2017]; root of context hierarchy]-[o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext]-[main]
+2017-02-06 11:36:55.835||INFO -[HV000001: Hibernate Validator 5.2.4.Final]-[o.h.validator.internal.util.Version]-[background-preinit]
+2017-02-06 11:36:56.202||INFO -[Loading XML bean definitions from class path resource [application-context.xml]]-[o.s.b.f.xml.XmlBeanDefinitionReader]-[main]
+2017-02-06 11:36:56.363||INFO -[Loading XML bean definitions from class path resource [threadPool.xml]]-[o.s.b.f.xml.XmlBeanDefinitionReader]-[main]
+2017-02-06 11:36:56.463||INFO -[Overriding bean definition for bean 'org.springframework.transaction.config.internalTransactionAdvisor' with a different definition: replacing [Root bean: class [org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration; factoryMethodName=transactionAdvisor; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/transaction/annotation/ProxyTransactionManagementConfiguration.class]]]-[o.s.b.f.s.DefaultListableBeanFactory]-[main]
+2017-02-06 11:36:56.464||INFO -[Skipping bean definition for [BeanMethod:name=transactionalEventListenerFactory,declaringClass=org.springframework.transaction.annotation.AbstractTransactionManagementConfiguration]: a definition for bean 'org.springframework.transaction.config.internalTransactionalEventListenerFactory' already exists. This top-level bean definition is considered as an override.]-[o.s.c.a.ConfigurationClassBeanDefinitionReader]-[main]
+2017-02-06 11:36:56.641||INFO -[Loading properties file from class path resource [config.properties]]-[o.s.c.s.PropertySourcesPlaceholderConfigurer]-[main]
+2017-02-06 11:36:56.719||INFO -[Bean 'dataSource' of type [class org.logicalcobwebs.proxool.ProxoolDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-02-06 11:36:56.782||INFO -[Bean 'sqlSessionFactory' of type [class org.mybatis.spring.SqlSessionFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-02-06 11:36:56.782||INFO -[Bean 'sqlSessionFactory' of type [class org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-02-06 11:36:56.836||INFO -[Bean 'tradeDataMapper' of type [class org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-02-06 11:36:56.858||INFO -[Bean 'systemLogMapper' of type [class org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-02-06 11:36:56.885||INFO -[Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e86cac70] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-02-06 11:36:57.232||INFO -[Tomcat initialized with port(s): 8080 (http)]-[o.s.b.c.e.t.TomcatEmbeddedServletContainer]-[main]
+2017-02-06 11:36:57.243||INFO -[Starting service Tomcat]-[o.a.catalina.core.StandardService]-[main]
+2017-02-06 11:36:57.244||INFO -[Starting Servlet Engine: Apache Tomcat/8.5.5]-[o.a.catalina.core.StandardEngine]-[main]
+2017-02-06 11:36:57.450||INFO -[At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.]-[o.apache.jasper.servlet.TldScanner]-[localhost-startStop-1]
+2017-02-06 11:36:57.454||INFO -[Initializing Spring embedded WebApplicationContext]-[o.a.c.c.C.[Tomcat].[localhost].[/]]-[localhost-startStop-1]
+2017-02-06 11:36:57.455||INFO -[Root WebApplicationContext: initialization completed in 1704 ms]-[o.s.web.context.ContextLoader]-[localhost-startStop-1]
+2017-02-06 11:36:57.557||INFO -[Mapping servlet: 'dispatcherServlet' to [/]]-[o.s.b.w.s.ServletRegistrationBean]-[localhost-startStop-1]
+2017-02-06 11:36:57.561||INFO -[Mapping filter: 'characterEncodingFilter' to: [/*]]-[o.s.b.w.s.FilterRegistrationBean]-[localhost-startStop-1]
+2017-02-06 11:36:57.562||INFO -[Mapping filter: 'hiddenHttpMethodFilter' to: [/*]]-[o.s.b.w.s.FilterRegistrationBean]-[localhost-startStop-1]
+2017-02-06 11:36:57.562||INFO -[Mapping filter: 'httpPutFormContentFilter' to: [/*]]-[o.s.b.w.s.FilterRegistrationBean]-[localhost-startStop-1]
+2017-02-06 11:36:57.562||INFO -[Mapping filter: 'requestContextFilter' to: [/*]]-[o.s.b.w.s.FilterRegistrationBean]-[localhost-startStop-1]
+2017-02-06 11:36:57.630||INFO -[Initializing ExecutorService  'threadPoolTaskExecutor']-[o.s.s.c.ThreadPoolTaskExecutor]-[main]
+2017-02-06 11:36:57.808||INFO -[Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@41a2befb: startup date [Mon Feb 06 11:36:55 CST 2017]; root of context hierarchy]-[o.s.w.s.m.m.a.RequestMappingHandlerAdapter]-[main]
+2017-02-06 11:36:57.856||INFO -[Mapped "{[/login/login]}" onto public java.lang.String com.ch.controller.LoginController.login()]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-02-06 11:36:57.857||INFO -[Mapped "{[/login/checkLogin]}" onto public com.ch.utils.StatusJSON com.ch.controller.LoginController.checkLogin(javax.servlet.http.HttpSession,java.lang.String,java.lang.String)]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-02-06 11:36:57.858||INFO -[Mapped "{[/trade/trade]}" onto public java.lang.String com.ch.controller.TradeDataController.trade()]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-02-06 11:36:57.858||INFO -[Mapped "{[/trade/tradedata]}" onto public java.lang.String com.ch.controller.TradeDataController.tradedata(org.springframework.ui.ModelMap)]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-02-06 11:36:57.858||INFO -[Mapped "{[/userController/testAOP]}" onto public void com.ch.controller.UserController.testAOP(java.lang.String,java.lang.String)]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-02-06 11:36:57.860||INFO -[Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-02-06 11:36:57.861||INFO -[Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-02-06 11:36:57.888||INFO -[Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]-[o.s.w.s.h.SimpleUrlHandlerMapping]-[main]
+2017-02-06 11:36:57.888||INFO -[Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]-[o.s.w.s.h.SimpleUrlHandlerMapping]-[main]
+2017-02-06 11:36:57.915||INFO -[Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]-[o.s.w.s.h.SimpleUrlHandlerMapping]-[main]
+2017-02-06 11:36:58.116||INFO -[Registering beans for JMX exposure on startup]-[o.s.j.e.a.AnnotationMBeanExporter]-[main]
+2017-02-06 11:36:58.131||INFO -[Initializing ProtocolHandler ["http-nio-8080"]]-[o.a.coyote.http11.Http11NioProtocol]-[main]
+2017-02-06 11:36:58.141||INFO -[Starting ProtocolHandler [http-nio-8080]]-[o.a.coyote.http11.Http11NioProtocol]-[main]
+2017-02-06 11:36:58.246||INFO -[Using a shared selector for servlet write/read]-[o.a.tomcat.util.net.NioSelectorPool]-[main]
+2017-02-06 11:36:58.266||INFO -[Tomcat started on port(s): 8080 (http)]-[o.s.b.c.e.t.TomcatEmbeddedServletContainer]-[main]
+2017-02-06 11:36:58.271||INFO -[Started SpringBootDemoApplication in 2.932 seconds (JVM running for 3.408)]-[com.ch.SpringBootDemoApplication]-[main]
+2017-02-06 11:37:09.836||INFO -[Initializing Spring FrameworkServlet 'dispatcherServlet']-[o.a.c.c.C.[Tomcat].[localhost].[/]]-[http-nio-8080-exec-1]
+2017-02-06 11:37:09.836||INFO -[FrameworkServlet 'dispatcherServlet': initialization started]-[o.s.web.servlet.DispatcherServlet]-[http-nio-8080-exec-1]
+2017-02-06 11:37:09.853||INFO -[FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms]-[o.s.web.servlet.DispatcherServlet]-[http-nio-8080-exec-1]
+2017-02-06 18:33:30.296||INFO -[Shutting down 'null' pool immediately [Shutdown Hook]]-[org.logicalcobwebs.proxool.null]-[Shutdown Hook]
+2017-02-06 18:33:30.297||INFO -[Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@41a2befb: startup date [Mon Feb 06 11:36:55 CST 2017]; root of context hierarchy]-[o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext]-[Thread-2]
+2017-02-06 18:33:30.298||INFO -[Stopping Prototyper thread]-[o.l.proxool.PrototyperController]-[Shutdown Hook]
+2017-02-06 18:33:30.299||INFO -[Stopping HouseKeeper thread]-[o.l.proxool.HouseKeeperController]-[Shutdown Hook]
+2017-02-06 18:33:30.308||INFO -[Unregistering JMX-exposed beans on shutdown]-[o.s.j.e.a.AnnotationMBeanExporter]-[Thread-2]
+2017-02-06 18:33:30.309||INFO -[Shutting down ExecutorService 'threadPoolTaskExecutor']-[o.s.s.c.ThreadPoolTaskExecutor]-[Thread-2]

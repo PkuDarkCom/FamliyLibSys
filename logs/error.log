@@ -1,0 +1,15 @@
+2017-05-10 11:52:45.148||ERROR-[
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userInfoMapper in com.ch.fls.service.impl.UserInfoServiceImpl required a bean of type 'com.ch.fls.dao.UserInfoMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.ch.fls.dao.UserInfoMapper' in your configuration.
+]-[o.s.b.d.LoggingFailureAnalysisReporter]-[main]

@@ -1,0 +1,266 @@
+2017-01-17 16:20:22.040||INFO -[Starting SpringBootDemoApplication on bogon with PID 70425 (/Users/xiaowan/Documents/studyspace/SpringBootDemo/target/classes started by xiaowan in /Users/xiaowan/Documents/studyspace/SpringBootDemo)]-[com.ch.SpringBootDemoApplication]-[main]
+2017-01-17 16:20:22.045||INFO -[No active profile set, falling back to default profiles: default]-[com.ch.SpringBootDemoApplication]-[main]
+2017-01-17 16:20:22.114||INFO -[Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7bedc48a: startup date [Tue Jan 17 16:20:22 CST 2017]; root of context hierarchy]-[o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext]-[main]
+2017-01-17 16:20:22.233||INFO -[HV000001: Hibernate Validator 5.2.4.Final]-[o.h.validator.internal.util.Version]-[background-preinit]
+2017-01-17 16:20:22.703||INFO -[Loading XML bean definitions from class path resource [application-context.xml]]-[o.s.b.f.xml.XmlBeanDefinitionReader]-[main]
+2017-01-17 16:20:22.919||INFO -[Loading XML bean definitions from class path resource [threadPool.xml]]-[o.s.b.f.xml.XmlBeanDefinitionReader]-[main]
+2017-01-17 16:20:23.051||INFO -[Overriding bean definition for bean 'org.springframework.transaction.config.internalTransactionAdvisor' with a different definition: replacing [Root bean: class [org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration; factoryMethodName=transactionAdvisor; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/transaction/annotation/ProxyTransactionManagementConfiguration.class]]]-[o.s.b.f.s.DefaultListableBeanFactory]-[main]
+2017-01-17 16:20:23.053||INFO -[Skipping bean definition for [BeanMethod:name=transactionalEventListenerFactory,declaringClass=org.springframework.transaction.annotation.AbstractTransactionManagementConfiguration]: a definition for bean 'org.springframework.transaction.config.internalTransactionalEventListenerFactory' already exists. This top-level bean definition is considered as an override.]-[o.s.c.a.ConfigurationClassBeanDefinitionReader]-[main]
+2017-01-17 16:20:23.261||INFO -[Loading properties file from class path resource [config.properties]]-[o.s.c.s.PropertySourcesPlaceholderConfigurer]-[main]
+2017-01-17 16:20:23.352||INFO -[Bean 'dataSource' of type [class org.logicalcobwebs.proxool.ProxoolDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-01-17 16:20:23.491||INFO -[Bean 'sqlSessionFactory' of type [class org.mybatis.spring.SqlSessionFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-01-17 16:20:23.492||INFO -[Bean 'sqlSessionFactory' of type [class org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-01-17 16:20:23.506||INFO -[Bean 'systemLogMapper' of type [class org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-01-17 16:20:23.546||INFO -[Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$69b03999] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-01-17 16:20:23.960||INFO -[Tomcat initialized with port(s): 8080 (http)]-[o.s.b.c.e.t.TomcatEmbeddedServletContainer]-[main]
+2017-01-17 16:20:23.977||INFO -[Starting service Tomcat]-[o.a.catalina.core.StandardService]-[main]
+2017-01-17 16:20:23.978||INFO -[Starting Servlet Engine: Apache Tomcat/8.5.5]-[o.a.catalina.core.StandardEngine]-[main]
+2017-01-17 16:20:24.210||INFO -[At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.]-[o.apache.jasper.servlet.TldScanner]-[localhost-startStop-1]
+2017-01-17 16:20:24.215||INFO -[Initializing Spring embedded WebApplicationContext]-[o.a.c.c.C.[Tomcat].[localhost].[/]]-[localhost-startStop-1]
+2017-01-17 16:20:24.216||INFO -[Root WebApplicationContext: initialization completed in 2102 ms]-[o.s.web.context.ContextLoader]-[localhost-startStop-1]
+2017-01-17 16:20:24.365||INFO -[Mapping servlet: 'dispatcherServlet' to [/]]-[o.s.b.w.s.ServletRegistrationBean]-[localhost-startStop-1]
+2017-01-17 16:20:24.370||INFO -[Mapping filter: 'characterEncodingFilter' to: [/*]]-[o.s.b.w.s.FilterRegistrationBean]-[localhost-startStop-1]
+2017-01-17 16:20:24.371||INFO -[Mapping filter: 'hiddenHttpMethodFilter' to: [/*]]-[o.s.b.w.s.FilterRegistrationBean]-[localhost-startStop-1]
+2017-01-17 16:20:24.371||INFO -[Mapping filter: 'httpPutFormContentFilter' to: [/*]]-[o.s.b.w.s.FilterRegistrationBean]-[localhost-startStop-1]
+2017-01-17 16:20:24.371||INFO -[Mapping filter: 'requestContextFilter' to: [/*]]-[o.s.b.w.s.FilterRegistrationBean]-[localhost-startStop-1]
+2017-01-17 16:20:24.441||INFO -[Initializing ExecutorService  'threadPoolTaskExecutor']-[o.s.s.c.ThreadPoolTaskExecutor]-[main]
+2017-01-17 16:20:24.645||INFO -[Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7bedc48a: startup date [Tue Jan 17 16:20:22 CST 2017]; root of context hierarchy]-[o.s.w.s.m.m.a.RequestMappingHandlerAdapter]-[main]
+2017-01-17 16:20:24.730||INFO -[Mapped "{[/login/login]}" onto public java.lang.String com.ch.controller.LoginController.login()]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-01-17 16:20:24.731||INFO -[Mapped "{[/login/checkLogin]}" onto public com.ch.utils.StatusJSON com.ch.controller.LoginController.checkLogin(javax.servlet.http.HttpSession,java.lang.String,java.lang.String)]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-01-17 16:20:24.732||INFO -[Mapped "{[/tradedata/tradePre]}" onto public java.lang.String com.ch.controller.TradeDataController.trader()]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-01-17 16:20:24.732||INFO -[Mapped "{[/tradedata/tradeContent]}" onto public java.lang.String com.ch.controller.TradeDataController.traderContent()]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-01-17 16:20:24.732||INFO -[Mapped "{[/userController/testAOP]}" onto public void com.ch.controller.UserController.testAOP(java.lang.String,java.lang.String)]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-01-17 16:20:24.734||INFO -[Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-01-17 16:20:24.734||INFO -[Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-01-17 16:20:24.769||INFO -[Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]-[o.s.w.s.h.SimpleUrlHandlerMapping]-[main]
+2017-01-17 16:20:24.769||INFO -[Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]-[o.s.w.s.h.SimpleUrlHandlerMapping]-[main]
+2017-01-17 16:20:24.805||INFO -[Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]-[o.s.w.s.h.SimpleUrlHandlerMapping]-[main]
+2017-01-17 16:20:25.025||INFO -[Registering beans for JMX exposure on startup]-[o.s.j.e.a.AnnotationMBeanExporter]-[main]
+2017-01-17 16:20:25.043||INFO -[Initializing ProtocolHandler ["http-nio-8080"]]-[o.a.coyote.http11.Http11NioProtocol]-[main]
+2017-01-17 16:20:25.056||INFO -[Starting ProtocolHandler [http-nio-8080]]-[o.a.coyote.http11.Http11NioProtocol]-[main]
+2017-01-17 16:20:25.078||INFO -[Using a shared selector for servlet write/read]-[o.a.tomcat.util.net.NioSelectorPool]-[main]
+2017-01-17 16:20:25.108||INFO -[Tomcat started on port(s): 8080 (http)]-[o.s.b.c.e.t.TomcatEmbeddedServletContainer]-[main]
+2017-01-17 16:20:25.113||INFO -[Started SpringBootDemoApplication in 3.524 seconds (JVM running for 4.125)]-[com.ch.SpringBootDemoApplication]-[main]
+2017-01-17 16:20:54.500||INFO -[Initializing Spring FrameworkServlet 'dispatcherServlet']-[o.a.c.c.C.[Tomcat].[localhost].[/]]-[http-nio-8080-exec-1]
+2017-01-17 16:20:54.500||INFO -[FrameworkServlet 'dispatcherServlet': initialization started]-[o.s.web.servlet.DispatcherServlet]-[http-nio-8080-exec-1]
+2017-01-17 16:20:54.514||INFO -[FrameworkServlet 'dispatcherServlet': initialization completed in 13 ms]-[o.s.web.servlet.DispatcherServlet]-[http-nio-8080-exec-1]
+2017-01-17 16:26:33.847||INFO -[Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7bedc48a: startup date [Tue Jan 17 16:20:22 CST 2017]; root of context hierarchy]-[o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext]-[Thread-2]
+2017-01-17 16:26:33.850||INFO -[Unregistering JMX-exposed beans on shutdown]-[o.s.j.e.a.AnnotationMBeanExporter]-[Thread-2]
+2017-01-17 16:26:33.850||INFO -[Shutting down ExecutorService 'threadPoolTaskExecutor']-[o.s.s.c.ThreadPoolTaskExecutor]-[Thread-2]
+2017-01-17 16:31:09.262||INFO -[Starting SpringBootDemoApplication on bogon with PID 70452 (/Users/xiaowan/Documents/studyspace/SpringBootDemo/target/classes started by xiaowan in /Users/xiaowan/Documents/studyspace/SpringBootDemo)]-[com.ch.SpringBootDemoApplication]-[main]
+2017-01-17 16:31:09.271||INFO -[No active profile set, falling back to default profiles: default]-[com.ch.SpringBootDemoApplication]-[main]
+2017-01-17 16:31:09.337||INFO -[Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1603cd68: startup date [Tue Jan 17 16:31:09 CST 2017]; root of context hierarchy]-[o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext]-[main]
+2017-01-17 16:31:09.408||INFO -[HV000001: Hibernate Validator 5.2.4.Final]-[o.h.validator.internal.util.Version]-[background-preinit]
+2017-01-17 16:31:09.954||INFO -[Loading XML bean definitions from class path resource [application-context.xml]]-[o.s.b.f.xml.XmlBeanDefinitionReader]-[main]
+2017-01-17 16:31:10.153||INFO -[Loading XML bean definitions from class path resource [threadPool.xml]]-[o.s.b.f.xml.XmlBeanDefinitionReader]-[main]
+2017-01-17 16:31:10.306||INFO -[Overriding bean definition for bean 'org.springframework.transaction.config.internalTransactionAdvisor' with a different definition: replacing [Root bean: class [org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration; factoryMethodName=transactionAdvisor; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/transaction/annotation/ProxyTransactionManagementConfiguration.class]]]-[o.s.b.f.s.DefaultListableBeanFactory]-[main]
+2017-01-17 16:31:10.307||INFO -[Skipping bean definition for [BeanMethod:name=transactionalEventListenerFactory,declaringClass=org.springframework.transaction.annotation.AbstractTransactionManagementConfiguration]: a definition for bean 'org.springframework.transaction.config.internalTransactionalEventListenerFactory' already exists. This top-level bean definition is considered as an override.]-[o.s.c.a.ConfigurationClassBeanDefinitionReader]-[main]
+2017-01-17 16:31:10.523||INFO -[Loading properties file from class path resource [config.properties]]-[o.s.c.s.PropertySourcesPlaceholderConfigurer]-[main]
+2017-01-17 16:31:10.648||INFO -[Bean 'dataSource' of type [class org.logicalcobwebs.proxool.ProxoolDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-01-17 16:31:10.769||INFO -[Bean 'sqlSessionFactory' of type [class org.mybatis.spring.SqlSessionFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-01-17 16:31:10.769||INFO -[Bean 'sqlSessionFactory' of type [class org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-01-17 16:31:10.785||INFO -[Bean 'systemLogMapper' of type [class org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-01-17 16:31:10.848||INFO -[Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fd8cc2df] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-01-17 16:31:11.318||INFO -[Tomcat initialized with port(s): 8080 (http)]-[o.s.b.c.e.t.TomcatEmbeddedServletContainer]-[main]
+2017-01-17 16:31:11.331||INFO -[Starting service Tomcat]-[o.a.catalina.core.StandardService]-[main]
+2017-01-17 16:31:11.332||INFO -[Starting Servlet Engine: Apache Tomcat/8.5.5]-[o.a.catalina.core.StandardEngine]-[main]
+2017-01-17 16:31:11.557||INFO -[At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.]-[o.apache.jasper.servlet.TldScanner]-[localhost-startStop-1]
+2017-01-17 16:31:11.561||INFO -[Initializing Spring embedded WebApplicationContext]-[o.a.c.c.C.[Tomcat].[localhost].[/]]-[localhost-startStop-1]
+2017-01-17 16:31:11.562||INFO -[Root WebApplicationContext: initialization completed in 2225 ms]-[o.s.web.context.ContextLoader]-[localhost-startStop-1]
+2017-01-17 16:31:11.751||INFO -[Mapping servlet: 'dispatcherServlet' to [/]]-[o.s.b.w.s.ServletRegistrationBean]-[localhost-startStop-1]
+2017-01-17 16:31:11.755||INFO -[Mapping filter: 'characterEncodingFilter' to: [/*]]-[o.s.b.w.s.FilterRegistrationBean]-[localhost-startStop-1]
+2017-01-17 16:31:11.755||INFO -[Mapping filter: 'hiddenHttpMethodFilter' to: [/*]]-[o.s.b.w.s.FilterRegistrationBean]-[localhost-startStop-1]
+2017-01-17 16:31:11.756||INFO -[Mapping filter: 'httpPutFormContentFilter' to: [/*]]-[o.s.b.w.s.FilterRegistrationBean]-[localhost-startStop-1]
+2017-01-17 16:31:11.756||INFO -[Mapping filter: 'requestContextFilter' to: [/*]]-[o.s.b.w.s.FilterRegistrationBean]-[localhost-startStop-1]
+2017-01-17 16:31:11.850||INFO -[Initializing ExecutorService  'threadPoolTaskExecutor']-[o.s.s.c.ThreadPoolTaskExecutor]-[main]
+2017-01-17 16:31:12.128||INFO -[Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1603cd68: startup date [Tue Jan 17 16:31:09 CST 2017]; root of context hierarchy]-[o.s.w.s.m.m.a.RequestMappingHandlerAdapter]-[main]
+2017-01-17 16:31:12.223||INFO -[Mapped "{[/login/login]}" onto public java.lang.String com.ch.controller.LoginController.login()]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-01-17 16:31:12.224||INFO -[Mapped "{[/login/checkLogin]}" onto public com.ch.utils.StatusJSON com.ch.controller.LoginController.checkLogin(javax.servlet.http.HttpSession,java.lang.String,java.lang.String)]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-01-17 16:31:12.224||INFO -[Mapped "{[/tradedata/tradePre]}" onto public java.lang.String com.ch.controller.TradeDataController.trader()]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-01-17 16:31:12.225||INFO -[Mapped "{[/tradedata/tradeContent]}" onto public java.lang.String com.ch.controller.TradeDataController.traderContent()]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-01-17 16:31:12.225||INFO -[Mapped "{[/userController/testAOP]}" onto public void com.ch.controller.UserController.testAOP(java.lang.String,java.lang.String)]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-01-17 16:31:12.228||INFO -[Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-01-17 16:31:12.228||INFO -[Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-01-17 16:31:12.288||INFO -[Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]-[o.s.w.s.h.SimpleUrlHandlerMapping]-[main]
+2017-01-17 16:31:12.288||INFO -[Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]-[o.s.w.s.h.SimpleUrlHandlerMapping]-[main]
+2017-01-17 16:31:12.347||INFO -[Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]-[o.s.w.s.h.SimpleUrlHandlerMapping]-[main]
+2017-01-17 16:31:12.762||INFO -[Registering beans for JMX exposure on startup]-[o.s.j.e.a.AnnotationMBeanExporter]-[main]
+2017-01-17 16:31:12.779||INFO -[Initializing ProtocolHandler ["http-nio-8080"]]-[o.a.coyote.http11.Http11NioProtocol]-[main]
+2017-01-17 16:31:12.791||INFO -[Starting ProtocolHandler [http-nio-8080]]-[o.a.coyote.http11.Http11NioProtocol]-[main]
+2017-01-17 16:31:12.809||INFO -[Using a shared selector for servlet write/read]-[o.a.tomcat.util.net.NioSelectorPool]-[main]
+2017-01-17 16:31:12.953||INFO -[Tomcat started on port(s): 8080 (http)]-[o.s.b.c.e.t.TomcatEmbeddedServletContainer]-[main]
+2017-01-17 16:31:12.958||INFO -[Started SpringBootDemoApplication in 4.221 seconds (JVM running for 5.036)]-[com.ch.SpringBootDemoApplication]-[main]
+2017-01-17 16:31:19.750||INFO -[Initializing Spring FrameworkServlet 'dispatcherServlet']-[o.a.c.c.C.[Tomcat].[localhost].[/]]-[http-nio-8080-exec-1]
+2017-01-17 16:31:19.751||INFO -[FrameworkServlet 'dispatcherServlet': initialization started]-[o.s.web.servlet.DispatcherServlet]-[http-nio-8080-exec-1]
+2017-01-17 16:31:19.774||INFO -[FrameworkServlet 'dispatcherServlet': initialization completed in 23 ms]-[o.s.web.servlet.DispatcherServlet]-[http-nio-8080-exec-1]
+2017-01-17 16:37:50.665||INFO -[Starting SpringBootDemoApplication on bogon with PID 70469 (/Users/xiaowan/Documents/studyspace/SpringBootDemo/target/classes started by xiaowan in /Users/xiaowan/Documents/studyspace/SpringBootDemo)]-[com.ch.SpringBootDemoApplication]-[main]
+2017-01-17 16:37:50.668||INFO -[No active profile set, falling back to default profiles: default]-[com.ch.SpringBootDemoApplication]-[main]
+2017-01-17 16:37:50.728||INFO -[Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7bedc48a: startup date [Tue Jan 17 16:37:50 CST 2017]; root of context hierarchy]-[o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext]-[main]
+2017-01-17 16:37:50.850||INFO -[HV000001: Hibernate Validator 5.2.4.Final]-[o.h.validator.internal.util.Version]-[background-preinit]
+2017-01-17 16:37:51.188||INFO -[Loading XML bean definitions from class path resource [application-context.xml]]-[o.s.b.f.xml.XmlBeanDefinitionReader]-[main]
+2017-01-17 16:37:51.357||INFO -[Loading XML bean definitions from class path resource [threadPool.xml]]-[o.s.b.f.xml.XmlBeanDefinitionReader]-[main]
+2017-01-17 16:37:51.467||INFO -[Overriding bean definition for bean 'org.springframework.transaction.config.internalTransactionAdvisor' with a different definition: replacing [Root bean: class [org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration; factoryMethodName=transactionAdvisor; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/transaction/annotation/ProxyTransactionManagementConfiguration.class]]]-[o.s.b.f.s.DefaultListableBeanFactory]-[main]
+2017-01-17 16:37:51.470||INFO -[Skipping bean definition for [BeanMethod:name=transactionalEventListenerFactory,declaringClass=org.springframework.transaction.annotation.AbstractTransactionManagementConfiguration]: a definition for bean 'org.springframework.transaction.config.internalTransactionalEventListenerFactory' already exists. This top-level bean definition is considered as an override.]-[o.s.c.a.ConfigurationClassBeanDefinitionReader]-[main]
+2017-01-17 16:37:51.656||INFO -[Loading properties file from class path resource [config.properties]]-[o.s.c.s.PropertySourcesPlaceholderConfigurer]-[main]
+2017-01-17 16:37:51.736||INFO -[Bean 'dataSource' of type [class org.logicalcobwebs.proxool.ProxoolDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-01-17 16:37:51.814||INFO -[Bean 'sqlSessionFactory' of type [class org.mybatis.spring.SqlSessionFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-01-17 16:37:51.814||INFO -[Bean 'sqlSessionFactory' of type [class org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-01-17 16:37:51.826||INFO -[Bean 'systemLogMapper' of type [class org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-01-17 16:37:51.865||INFO -[Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$69b03999] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-01-17 16:37:52.272||INFO -[Tomcat initialized with port(s): 8080 (http)]-[o.s.b.c.e.t.TomcatEmbeddedServletContainer]-[main]
+2017-01-17 16:37:52.284||INFO -[Starting service Tomcat]-[o.a.catalina.core.StandardService]-[main]
+2017-01-17 16:37:52.286||INFO -[Starting Servlet Engine: Apache Tomcat/8.5.5]-[o.a.catalina.core.StandardEngine]-[main]
+2017-01-17 16:37:52.525||INFO -[At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.]-[o.apache.jasper.servlet.TldScanner]-[localhost-startStop-1]
+2017-01-17 16:37:52.531||INFO -[Initializing Spring embedded WebApplicationContext]-[o.a.c.c.C.[Tomcat].[localhost].[/]]-[localhost-startStop-1]
+2017-01-17 16:37:52.531||INFO -[Root WebApplicationContext: initialization completed in 1803 ms]-[o.s.web.context.ContextLoader]-[localhost-startStop-1]
+2017-01-17 16:37:52.657||INFO -[Mapping servlet: 'dispatcherServlet' to [/]]-[o.s.b.w.s.ServletRegistrationBean]-[localhost-startStop-1]
+2017-01-17 16:37:52.662||INFO -[Mapping filter: 'characterEncodingFilter' to: [/*]]-[o.s.b.w.s.FilterRegistrationBean]-[localhost-startStop-1]
+2017-01-17 16:37:52.662||INFO -[Mapping filter: 'hiddenHttpMethodFilter' to: [/*]]-[o.s.b.w.s.FilterRegistrationBean]-[localhost-startStop-1]
+2017-01-17 16:37:52.663||INFO -[Mapping filter: 'httpPutFormContentFilter' to: [/*]]-[o.s.b.w.s.FilterRegistrationBean]-[localhost-startStop-1]
+2017-01-17 16:37:52.663||INFO -[Mapping filter: 'requestContextFilter' to: [/*]]-[o.s.b.w.s.FilterRegistrationBean]-[localhost-startStop-1]
+2017-01-17 16:37:52.735||INFO -[Initializing ExecutorService  'threadPoolTaskExecutor']-[o.s.s.c.ThreadPoolTaskExecutor]-[main]
+2017-01-17 16:37:52.923||INFO -[Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7bedc48a: startup date [Tue Jan 17 16:37:50 CST 2017]; root of context hierarchy]-[o.s.w.s.m.m.a.RequestMappingHandlerAdapter]-[main]
+2017-01-17 16:37:52.980||INFO -[Mapped "{[/login/login]}" onto public java.lang.String com.ch.controller.LoginController.login()]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-01-17 16:37:52.981||INFO -[Mapped "{[/login/checkLogin]}" onto public com.ch.utils.StatusJSON com.ch.controller.LoginController.checkLogin(javax.servlet.http.HttpSession,java.lang.String,java.lang.String)]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-01-17 16:37:52.982||INFO -[Mapped "{[/tradedata/tradePre]}" onto public java.lang.String com.ch.controller.TradeDataController.trader()]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-01-17 16:37:52.982||INFO -[Mapped "{[/tradedata/tradeContent]}" onto public java.lang.String com.ch.controller.TradeDataController.traderContent()]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-01-17 16:37:52.983||INFO -[Mapped "{[/userController/testAOP]}" onto public void com.ch.controller.UserController.testAOP(java.lang.String,java.lang.String)]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-01-17 16:37:52.985||INFO -[Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-01-17 16:37:52.986||INFO -[Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-01-17 16:37:53.020||INFO -[Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]-[o.s.w.s.h.SimpleUrlHandlerMapping]-[main]
+2017-01-17 16:37:53.020||INFO -[Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]-[o.s.w.s.h.SimpleUrlHandlerMapping]-[main]
+2017-01-17 16:37:53.056||INFO -[Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]-[o.s.w.s.h.SimpleUrlHandlerMapping]-[main]
+2017-01-17 16:37:53.251||INFO -[Registering beans for JMX exposure on startup]-[o.s.j.e.a.AnnotationMBeanExporter]-[main]
+2017-01-17 16:37:53.267||INFO -[Initializing ProtocolHandler ["http-nio-8080"]]-[o.a.coyote.http11.Http11NioProtocol]-[main]
+2017-01-17 16:37:53.280||INFO -[Starting ProtocolHandler [http-nio-8080]]-[o.a.coyote.http11.Http11NioProtocol]-[main]
+2017-01-17 16:37:53.299||INFO -[Using a shared selector for servlet write/read]-[o.a.tomcat.util.net.NioSelectorPool]-[main]
+2017-01-17 16:37:53.325||INFO -[Tomcat started on port(s): 8080 (http)]-[o.s.b.c.e.t.TomcatEmbeddedServletContainer]-[main]
+2017-01-17 16:37:53.330||INFO -[Started SpringBootDemoApplication in 3.035 seconds (JVM running for 3.537)]-[com.ch.SpringBootDemoApplication]-[main]
+2017-01-17 16:41:05.033||INFO -[Starting SpringBootDemoApplication on bogon with PID 70478 (/Users/xiaowan/Documents/studyspace/SpringBootDemo/target/classes started by xiaowan in /Users/xiaowan/Documents/studyspace/SpringBootDemo)]-[com.ch.SpringBootDemoApplication]-[main]
+2017-01-17 16:41:05.039||INFO -[No active profile set, falling back to default profiles: default]-[com.ch.SpringBootDemoApplication]-[main]
+2017-01-17 16:41:05.110||INFO -[Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1603cd68: startup date [Tue Jan 17 16:41:05 CST 2017]; root of context hierarchy]-[o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext]-[main]
+2017-01-17 16:41:05.211||INFO -[HV000001: Hibernate Validator 5.2.4.Final]-[o.h.validator.internal.util.Version]-[background-preinit]
+2017-01-17 16:41:05.759||INFO -[Loading XML bean definitions from class path resource [application-context.xml]]-[o.s.b.f.xml.XmlBeanDefinitionReader]-[main]
+2017-01-17 16:41:05.978||INFO -[Loading XML bean definitions from class path resource [threadPool.xml]]-[o.s.b.f.xml.XmlBeanDefinitionReader]-[main]
+2017-01-17 16:41:06.170||INFO -[Overriding bean definition for bean 'org.springframework.transaction.config.internalTransactionAdvisor' with a different definition: replacing [Root bean: class [org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration; factoryMethodName=transactionAdvisor; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/transaction/annotation/ProxyTransactionManagementConfiguration.class]]]-[o.s.b.f.s.DefaultListableBeanFactory]-[main]
+2017-01-17 16:41:06.173||INFO -[Skipping bean definition for [BeanMethod:name=transactionalEventListenerFactory,declaringClass=org.springframework.transaction.annotation.AbstractTransactionManagementConfiguration]: a definition for bean 'org.springframework.transaction.config.internalTransactionalEventListenerFactory' already exists. This top-level bean definition is considered as an override.]-[o.s.c.a.ConfigurationClassBeanDefinitionReader]-[main]
+2017-01-17 16:41:06.396||INFO -[Loading properties file from class path resource [config.properties]]-[o.s.c.s.PropertySourcesPlaceholderConfigurer]-[main]
+2017-01-17 16:41:06.505||INFO -[Bean 'dataSource' of type [class org.logicalcobwebs.proxool.ProxoolDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-01-17 16:41:06.592||INFO -[Bean 'sqlSessionFactory' of type [class org.mybatis.spring.SqlSessionFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-01-17 16:41:06.593||INFO -[Bean 'sqlSessionFactory' of type [class org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-01-17 16:41:06.608||INFO -[Bean 'systemLogMapper' of type [class org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-01-17 16:41:06.671||INFO -[Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$530acf21] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-01-17 16:41:07.141||INFO -[Tomcat initialized with port(s): 8080 (http)]-[o.s.b.c.e.t.TomcatEmbeddedServletContainer]-[main]
+2017-01-17 16:41:07.156||INFO -[Starting service Tomcat]-[o.a.catalina.core.StandardService]-[main]
+2017-01-17 16:41:07.157||INFO -[Starting Servlet Engine: Apache Tomcat/8.5.5]-[o.a.catalina.core.StandardEngine]-[main]
+2017-01-17 16:41:07.398||INFO -[At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.]-[o.apache.jasper.servlet.TldScanner]-[localhost-startStop-1]
+2017-01-17 16:41:07.402||INFO -[Initializing Spring embedded WebApplicationContext]-[o.a.c.c.C.[Tomcat].[localhost].[/]]-[localhost-startStop-1]
+2017-01-17 16:41:07.403||INFO -[Root WebApplicationContext: initialization completed in 2292 ms]-[o.s.web.context.ContextLoader]-[localhost-startStop-1]
+2017-01-17 16:41:07.579||INFO -[Mapping servlet: 'dispatcherServlet' to [/]]-[o.s.b.w.s.ServletRegistrationBean]-[localhost-startStop-1]
+2017-01-17 16:41:07.584||INFO -[Mapping filter: 'characterEncodingFilter' to: [/*]]-[o.s.b.w.s.FilterRegistrationBean]-[localhost-startStop-1]
+2017-01-17 16:41:07.585||INFO -[Mapping filter: 'hiddenHttpMethodFilter' to: [/*]]-[o.s.b.w.s.FilterRegistrationBean]-[localhost-startStop-1]
+2017-01-17 16:41:07.585||INFO -[Mapping filter: 'httpPutFormContentFilter' to: [/*]]-[o.s.b.w.s.FilterRegistrationBean]-[localhost-startStop-1]
+2017-01-17 16:41:07.585||INFO -[Mapping filter: 'requestContextFilter' to: [/*]]-[o.s.b.w.s.FilterRegistrationBean]-[localhost-startStop-1]
+2017-01-17 16:41:07.682||INFO -[Initializing ExecutorService  'threadPoolTaskExecutor']-[o.s.s.c.ThreadPoolTaskExecutor]-[main]
+2017-01-17 16:41:07.963||INFO -[Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1603cd68: startup date [Tue Jan 17 16:41:05 CST 2017]; root of context hierarchy]-[o.s.w.s.m.m.a.RequestMappingHandlerAdapter]-[main]
+2017-01-17 16:41:08.041||INFO -[Mapped "{[/login/login]}" onto public java.lang.String com.ch.controller.LoginController.login()]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-01-17 16:41:08.042||INFO -[Mapped "{[/login/checkLogin]}" onto public com.ch.utils.StatusJSON com.ch.controller.LoginController.checkLogin(javax.servlet.http.HttpSession,java.lang.String,java.lang.String)]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-01-17 16:41:08.043||INFO -[Mapped "{[/tradedata/tradePre]}" onto public java.lang.String com.ch.controller.TradeDataController.trader()]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-01-17 16:41:08.043||INFO -[Mapped "{[/tradedata/tradeContent]}" onto public java.lang.String com.ch.controller.TradeDataController.traderContent()]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-01-17 16:41:08.044||INFO -[Mapped "{[/userController/testAOP]}" onto public void com.ch.controller.UserController.testAOP(java.lang.String,java.lang.String)]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-01-17 16:41:08.046||INFO -[Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-01-17 16:41:08.046||INFO -[Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-01-17 16:41:08.099||INFO -[Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]-[o.s.w.s.h.SimpleUrlHandlerMapping]-[main]
+2017-01-17 16:41:08.099||INFO -[Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]-[o.s.w.s.h.SimpleUrlHandlerMapping]-[main]
+2017-01-17 16:41:08.157||INFO -[Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]-[o.s.w.s.h.SimpleUrlHandlerMapping]-[main]
+2017-01-17 16:41:08.578||INFO -[Registering beans for JMX exposure on startup]-[o.s.j.e.a.AnnotationMBeanExporter]-[main]
+2017-01-17 16:41:08.596||INFO -[Initializing ProtocolHandler ["http-nio-8080"]]-[o.a.coyote.http11.Http11NioProtocol]-[main]
+2017-01-17 16:41:08.617||INFO -[Starting ProtocolHandler [http-nio-8080]]-[o.a.coyote.http11.Http11NioProtocol]-[main]
+2017-01-17 16:41:08.634||ERROR-[Failed to start end point associated with ProtocolHandler [http-nio-8080]]-[o.a.coyote.http11.Http11NioProtocol]-[main]
+java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:436)
+	at sun.nio.ch.Net.bind(Net.java:428)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:228)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:874)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:590)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:969)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:233)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:178)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:544)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.ch.SpringBootDemoApplication.main(SpringBootDemoApplication.java:24)
+2017-01-17 16:41:08.657||ERROR-[Failed to start connector [Connector[HTTP/1.1-8080]]]-[o.a.catalina.core.StandardService]-[main]
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-8080]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:233)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:178)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:544)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.ch.SpringBootDemoApplication.main(SpringBootDemoApplication.java:24)
+Caused by: org.apache.catalina.LifecycleException: service.getName(): "Tomcat";  Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:976)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 13 common frames omitted
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:436)
+	at sun.nio.ch.Net.bind(Net.java:428)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:228)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:874)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:590)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:969)
+	... 14 common frames omitted
+2017-01-17 16:41:08.793||INFO -[Pausing ProtocolHandler ["http-nio-8080"]]-[o.a.coyote.http11.Http11NioProtocol]-[main]
+2017-01-17 16:41:08.793||INFO -[Stopping service Tomcat]-[o.a.catalina.core.StandardService]-[main]
+2017-01-17 16:41:08.805||WARN -[The web application [ROOT] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:142)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:43)]-[o.a.c.loader.WebappClassLoaderBase]-[localhost-startStop-1]
+2017-01-17 16:41:08.809||INFO -[The stop() method was called on component [StandardServer[-1]] after stop() had already been called. The second call will be ignored.]-[o.a.catalina.util.LifecycleBase]-[main]
+2017-01-17 16:41:08.810||INFO -[Stopping ProtocolHandler ["http-nio-8080"]]-[o.a.coyote.http11.Http11NioProtocol]-[main]
+2017-01-17 16:41:08.810||INFO -[Destroying ProtocolHandler ["http-nio-8080"]]-[o.a.coyote.http11.Http11NioProtocol]-[main]
+2017-01-17 16:41:08.813||INFO -[
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.]-[o.s.b.a.l.AutoConfigurationReportLoggingInitializer]-[main]
+2017-01-17 16:41:08.816||ERROR-[
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+]-[o.s.b.d.LoggingFailureAnalysisReporter]-[main]
+2017-01-17 16:41:08.818||INFO -[Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1603cd68: startup date [Tue Jan 17 16:41:05 CST 2017]; root of context hierarchy]-[o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext]-[main]
+2017-01-17 16:41:08.819||INFO -[Unregistering JMX-exposed beans on shutdown]-[o.s.j.e.a.AnnotationMBeanExporter]-[main]
+2017-01-17 16:41:08.821||INFO -[Shutting down ExecutorService 'threadPoolTaskExecutor']-[o.s.s.c.ThreadPoolTaskExecutor]-[main]
+2017-01-17 16:41:27.039||INFO -[Initializing Spring FrameworkServlet 'dispatcherServlet']-[o.a.c.c.C.[Tomcat].[localhost].[/]]-[http-nio-8080-exec-1]
+2017-01-17 16:41:27.040||INFO -[FrameworkServlet 'dispatcherServlet': initialization started]-[o.s.web.servlet.DispatcherServlet]-[http-nio-8080-exec-1]
+2017-01-17 16:41:27.054||INFO -[FrameworkServlet 'dispatcherServlet': initialization completed in 14 ms]-[o.s.web.servlet.DispatcherServlet]-[http-nio-8080-exec-1]

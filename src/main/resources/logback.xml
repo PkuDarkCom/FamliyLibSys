@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration scan="true" scanPeriod="30 seconds">
+
+	<jmxConfigurator />
+
+	<property name="encoderPattern"
+		value="%d{yyyy-MM-dd HH:mm:ss.SSS}|%X{tradenum}|%-5level-[%msg]-[%logger{35}]-[%thread]%n" />
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>${encoderPattern}</pattern>
+		</layout>
+	</appender>
+
+	<appender name="server"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>logs/server.log</file>
+		<append>true</append>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>logs/%d{yyyyMMdd}/server.log.%i</fileNamePattern>
+			<MaxHistory>360</MaxHistory>
+			<TimeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<MaxFileSize>100MB</MaxFileSize>
+			</TimeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+		<encoder>
+			<pattern>${encoderPattern}</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="error"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>ERROR</level>
+		</filter>
+		<file>logs/error.log</file>
+		<append>true</append>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>logs/%d{yyyyMMdd}/error.log.%i</fileNamePattern>
+			<MaxHistory>360</MaxHistory>
+			<TimeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<MaxFileSize>100MB</MaxFileSize>
+			</TimeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+
+		<encoder>
+			<pattern>${encoderPattern}</pattern>
+		</encoder>
+	</appender>
+
+	<logger name="dao" level="DEBUG">
+	</logger>
+
+	<logger name="org.apache.ibatis" level="info" additivity="false">
+		<appender-ref ref="server" />
+	</logger>
+	<logger name="com.yhpos.posp" level="info" additivity="false">
+		<appender-ref ref="server" />
+	</logger>
+	<root level="info">
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="error" />
+		<appender-ref ref="server" />
+	</root>
+
+</configuration>

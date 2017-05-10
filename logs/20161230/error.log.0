@@ -1,0 +1,33 @@
+2016-12-30 14:26:19.300||ERROR-[==后置通知异常==]-[com.bg.annotation.SystemLogAspect]-[http-nio-8080-exec-1]
+2016-12-30 14:26:19.302||ERROR-[异常信息:nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error updating database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.]-[com.bg.annotation.SystemLogAspect]-[http-nio-8080-exec-1]
+2016-12-30 14:34:55.426||ERROR-[==后置通知异常==]-[com.bg.annotation.SystemLogAspect]-[http-nio-8080-exec-1]
+2016-12-30 14:34:55.427||ERROR-[异常信息:nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error updating database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.]-[com.bg.annotation.SystemLogAspect]-[http-nio-8080-exec-1]
+2016-12-30 15:26:48.195||ERROR-[
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field systemLogService in com.ch.annotation.SystemLogAspect required a bean of type 'com.ch.dao.SystemLogMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.ch.dao.SystemLogMapper' in your configuration.
+]-[o.s.b.d.LoggingFailureAnalysisReporter]-[main]
+2016-12-30 15:33:29.214||ERROR-[==后置通知异常==]-[com.ch.annotation.SystemLogAspect]-[http-nio-8080-exec-1]
+2016-12-30 15:33:29.214||ERROR-[异常信息:Invalid bound statement (not found): com.ch.dao.SystemLogMapper.insertSelective]-[com.ch.annotation.SystemLogAspect]-[http-nio-8080-exec-1]

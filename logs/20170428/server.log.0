@@ -1,0 +1,186 @@
+2017-04-28 16:02:28.112||INFO -[Starting SpringBootDemoApplication on bogon with PID 5591 (/Users/xiaowan/Documents/studyspace/JRQTrade/target/classes started by xiaowan in /Users/xiaowan/Documents/studyspace/JRQTrade)]-[com.ch.SpringBootDemoApplication]-[main]
+2017-04-28 16:02:28.123||INFO -[No active profile set, falling back to default profiles: default]-[com.ch.SpringBootDemoApplication]-[main]
+2017-04-28 16:02:28.203||INFO -[Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@69453e37: startup date [Fri Apr 28 16:02:28 CST 2017]; root of context hierarchy]-[o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext]-[main]
+2017-04-28 16:02:28.299||INFO -[HV000001: Hibernate Validator 5.2.4.Final]-[o.h.validator.internal.util.Version]-[background-preinit]
+2017-04-28 16:02:28.808||INFO -[Loading XML bean definitions from class path resource [application-context.xml]]-[o.s.b.f.xml.XmlBeanDefinitionReader]-[main]
+2017-04-28 16:02:29.031||INFO -[Loading XML bean definitions from class path resource [threadPool.xml]]-[o.s.b.f.xml.XmlBeanDefinitionReader]-[main]
+2017-04-28 16:02:29.170||INFO -[Overriding bean definition for bean 'org.springframework.transaction.config.internalTransactionAdvisor' with a different definition: replacing [Root bean: class [org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration; factoryMethodName=transactionAdvisor; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/transaction/annotation/ProxyTransactionManagementConfiguration.class]]]-[o.s.b.f.s.DefaultListableBeanFactory]-[main]
+2017-04-28 16:02:29.171||INFO -[Skipping bean definition for [BeanMethod:name=transactionalEventListenerFactory,declaringClass=org.springframework.transaction.annotation.AbstractTransactionManagementConfiguration]: a definition for bean 'org.springframework.transaction.config.internalTransactionalEventListenerFactory' already exists. This top-level bean definition is considered as an override.]-[o.s.c.a.ConfigurationClassBeanDefinitionReader]-[main]
+2017-04-28 16:02:29.371||INFO -[Loading properties file from class path resource [config.properties]]-[o.s.c.s.PropertySourcesPlaceholderConfigurer]-[main]
+2017-04-28 16:02:29.441||INFO -[Initializing ExecutorService ]-[o.s.s.c.ThreadPoolTaskExecutor]-[main]
+2017-04-28 16:02:29.441||INFO -[Bean 'executor' of type [class org.springframework.scheduling.config.TaskExecutorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-04-28 16:02:29.441||INFO -[Bean 'executor' of type [class org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-04-28 16:02:29.467||INFO -[Initializing ExecutorService  'scheduler']-[o.s.s.c.ThreadPoolTaskScheduler]-[main]
+2017-04-28 16:02:29.468||INFO -[Bean 'scheduler' of type [class org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-04-28 16:02:29.497||INFO -[Bean 'dataSource' of type [class org.logicalcobwebs.proxool.ProxoolDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-04-28 16:02:29.603||INFO -[Bean 'sqlSessionFactory' of type [class org.mybatis.spring.SqlSessionFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-04-28 16:02:29.603||INFO -[Bean 'sqlSessionFactory' of type [class org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-04-28 16:02:29.648||INFO -[Bean 'systemLogMapper' of type [class org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-04-28 16:02:29.695||INFO -[Bean 'JRQTraderInfoMapper' of type [class org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-04-28 16:02:29.707||INFO -[Bean 'JRQOrderInfoMapper' of type [class org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-04-28 16:02:29.743||INFO -[Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ceb0ee4a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]-[o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker]-[main]
+2017-04-28 16:02:30.273||INFO -[Tomcat initialized with port(s): 8080 (http)]-[o.s.b.c.e.t.TomcatEmbeddedServletContainer]-[main]
+2017-04-28 16:02:30.289||INFO -[Starting service Tomcat]-[o.a.catalina.core.StandardService]-[main]
+2017-04-28 16:02:30.290||INFO -[Starting Servlet Engine: Apache Tomcat/8.5.5]-[o.a.catalina.core.StandardEngine]-[main]
+2017-04-28 16:02:30.552||INFO -[At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.]-[o.apache.jasper.servlet.TldScanner]-[localhost-startStop-1]
+2017-04-28 16:02:30.556||INFO -[Initializing Spring embedded WebApplicationContext]-[o.a.c.c.C.[Tomcat].[localhost].[/]]-[localhost-startStop-1]
+2017-04-28 16:02:30.556||INFO -[Root WebApplicationContext: initialization completed in 2353 ms]-[o.s.web.context.ContextLoader]-[localhost-startStop-1]
+2017-04-28 16:02:30.683||INFO -[Mapping servlet: 'dispatcherServlet' to [/]]-[o.s.b.w.s.ServletRegistrationBean]-[localhost-startStop-1]
+2017-04-28 16:02:30.687||INFO -[Mapping filter: 'characterEncodingFilter' to: [/*]]-[o.s.b.w.s.FilterRegistrationBean]-[localhost-startStop-1]
+2017-04-28 16:02:30.688||INFO -[Mapping filter: 'hiddenHttpMethodFilter' to: [/*]]-[o.s.b.w.s.FilterRegistrationBean]-[localhost-startStop-1]
+2017-04-28 16:02:30.688||INFO -[Mapping filter: 'httpPutFormContentFilter' to: [/*]]-[o.s.b.w.s.FilterRegistrationBean]-[localhost-startStop-1]
+2017-04-28 16:02:30.688||INFO -[Mapping filter: 'requestContextFilter' to: [/*]]-[o.s.b.w.s.FilterRegistrationBean]-[localhost-startStop-1]
+2017-04-28 16:02:30.821||INFO -[Initializing ExecutorService  'threadPoolTaskExecutor']-[o.s.s.c.ThreadPoolTaskExecutor]-[main]
+2017-04-28 16:02:31.169||INFO -[Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@69453e37: startup date [Fri Apr 28 16:02:28 CST 2017]; root of context hierarchy]-[o.s.w.s.m.m.a.RequestMappingHandlerAdapter]-[main]
+2017-04-28 16:02:31.240||INFO -[Mapped "{[/order/order]}" onto public java.lang.String com.ch.jrq.controller.JRQOrderInfoController.trade(org.springframework.ui.ModelMap)]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-04-28 16:02:31.241||INFO -[Mapped "{[/order/orderContent]}" onto public java.lang.String com.ch.jrq.controller.JRQOrderInfoController.tradedata(org.springframework.ui.ModelMap,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-04-28 16:02:31.243||INFO -[Mapped "{[/trader/trader]}" onto public java.lang.String com.ch.jrq.controller.JRQTraderInfoController.trader()]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-04-28 16:02:31.243||INFO -[Mapped "{[/trader/traderContent]}" onto public java.lang.String com.ch.jrq.controller.JRQTraderInfoController.traderContent(org.springframework.ui.ModelMap,java.lang.String)]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-04-28 16:02:31.244||INFO -[Mapped "{[/trader/addTrader]}" onto public com.ch.jrq.utils.StatusJSON com.ch.jrq.controller.JRQTraderInfoController.addTrader(java.lang.String,java.lang.String)]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-04-28 16:02:31.244||INFO -[Mapped "{[/trader/updateTraderStatus]}" onto public java.lang.String com.ch.jrq.controller.JRQTraderInfoController.updateTraderStatus(java.lang.String,java.lang.String)]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-04-28 16:02:31.244||INFO -[Mapped "{[/trader/exportTraderFile]}" onto public com.ch.jrq.utils.StatusJSON com.ch.jrq.controller.JRQTraderInfoController.exportTraderFile()]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-04-28 16:02:31.245||INFO -[Mapped "{[/login/checkLogin]}" onto public com.ch.jrq.utils.StatusJSON com.ch.jrq.controller.LoginController.checkLogin(javax.servlet.http.HttpSession,java.lang.String,java.lang.String)]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-04-28 16:02:31.246||INFO -[Mapped "{[/login/login]}" onto public java.lang.String com.ch.jrq.controller.LoginController.login()]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-04-28 16:02:31.246||INFO -[Mapped "{[/userController/testAOP]}" onto public void com.ch.jrq.controller.UserController.testAOP(java.lang.String,java.lang.String)]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-04-28 16:02:31.247||INFO -[Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-04-28 16:02:31.248||INFO -[Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)]-[o.s.w.s.m.m.a.RequestMappingHandlerMapping]-[main]
+2017-04-28 16:02:31.282||INFO -[Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]-[o.s.w.s.h.SimpleUrlHandlerMapping]-[main]
+2017-04-28 16:02:31.282||INFO -[Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]-[o.s.w.s.h.SimpleUrlHandlerMapping]-[main]
+2017-04-28 16:02:31.318||INFO -[Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]-[o.s.w.s.h.SimpleUrlHandlerMapping]-[main]
+2017-04-28 16:02:31.648||INFO -[Registering beans for JMX exposure on startup]-[o.s.j.e.a.AnnotationMBeanExporter]-[main]
+2017-04-28 16:02:31.671||INFO -[Initializing ProtocolHandler ["http-nio-8080"]]-[o.a.coyote.http11.Http11NioProtocol]-[main]
+2017-04-28 16:02:31.683||INFO -[Starting ProtocolHandler [http-nio-8080]]-[o.a.coyote.http11.Http11NioProtocol]-[main]
+2017-04-28 16:02:31.706||INFO -[Using a shared selector for servlet write/read]-[o.a.tomcat.util.net.NioSelectorPool]-[main]
+2017-04-28 16:02:31.730||INFO -[Tomcat started on port(s): 8080 (http)]-[o.s.b.c.e.t.TomcatEmbeddedServletContainer]-[main]
+2017-04-28 16:02:31.734||INFO -[Started SpringBootDemoApplication in 4.09 seconds (JVM running for 4.692)]-[com.ch.SpringBootDemoApplication]-[main]
+2017-04-28 16:02:54.559||INFO -[Initializing Spring FrameworkServlet 'dispatcherServlet']-[o.a.c.c.C.[Tomcat].[localhost].[/]]-[http-nio-8080-exec-2]
+2017-04-28 16:02:54.560||INFO -[FrameworkServlet 'dispatcherServlet': initialization started]-[o.s.web.servlet.DispatcherServlet]-[http-nio-8080-exec-2]
+2017-04-28 16:02:54.579||INFO -[FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms]-[o.s.web.servlet.DispatcherServlet]-[http-nio-8080-exec-2]
+2017-04-28 16:03:02.588||INFO -[查询牛人信息请求参数：{traderStatus=}]-[c.c.j.c.JRQTraderInfoController]-[http-nio-8080-exec-6]
+2017-04-28 16:03:14.356||INFO -[查询牛人信息请求参数：{traderStatus=}]-[c.c.j.c.JRQTraderInfoController]-[http-nio-8080-exec-8]
+2017-04-28 16:03:18.026||INFO -[查询牛人信息请求参数：{traderStatus=}]-[c.c.j.c.JRQTraderInfoController]-[http-nio-8080-exec-10]
+2017-04-28 16:03:20.158||INFO -[查询交易订单信息请求参数：{symbol=, startTime=2017-03-28 23:59:59, endTime=2017-04-28 23:59:59, traderId=}]-[c.c.j.c.JRQOrderInfoController]-[http-nio-8080-exec-7]
+2017-04-28 16:03:20.210||INFO -[Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]]-[o.s.b.f.xml.XmlBeanDefinitionReader]-[http-nio-8080-exec-7]
+2017-04-28 16:03:20.247||INFO -[SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]]-[o.s.j.support.SQLErrorCodesFactory]-[http-nio-8080-exec-7]
+2017-04-28 16:03:20.256||ERROR-[Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'state' in 'order clause'
+### The error may exist in com/ch/jrq/dao/JRQOrderInfoMapper.xml
+### The error may involve com.ch.jrq.dao.JRQOrderInfoMapper.queryTradeDataList-Inline
+### The error occurred while setting parameters
+### SQL: SELECT     a.trader_id AS traderId,     a.trader_name AS traderName,     a.symbol AS symbol,     a.status status,     a.order_status orderStatus,     a.open_price AS openPrice,     a.close_price AS closePrice,     a.take_profit AS tp,     a.stop_loss AS sl,     a.profit AS profit,     FROM_UNIXTIME(a.open_time) AS openTime,     FROM_UNIXTIME(a.close_time) AS closeTime    FROM     jrq_order_info a              WHERE  FROM_UNIXTIME(a.open_time) >= str_to_date(?,'%Y-%m-%d %T')             and FROM_UNIXTIME(a.open_time)  <= str_to_date(?,'%Y-%m-%d %T')     ORDER BY  state ASC,open_time DESC
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'state' in 'order clause'
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'state' in 'order clause'] with root cause]-[o.a.c.c.C.[.[.[.[dispatcherServlet]]-[http-nio-8080-exec-7]
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'state' in 'order clause'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.Util.getInstance(Util.java:387)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:939)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.logicalcobwebs.proxool.ProxyStatement.invoke(ProxyStatement.java:100)
+	at org.logicalcobwebs.proxool.ProxyStatement.intercept(ProxyStatement.java:57)
+	at $java.sql.Statement$$EnhancerByProxool$$d3b3ff3b.execute(<generated>)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:62)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:78)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:303)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:154)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:102)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:82)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:120)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:113)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:386)
+	at com.sun.proxy.$Proxy42.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:205)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:122)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:64)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53)
+	at com.sun.proxy.$Proxy59.queryTradeDataList(Unknown Source)
+	at com.ch.jrq.service.impl.JRQOrderInfoServiceImpl.queryTradeDataList(JRQOrderInfoServiceImpl.java:22)
+	at com.ch.jrq.controller.JRQOrderInfoController.tradedata(JRQOrderInfoController.java:75)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:114)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:87)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2017-04-28 16:04:00.010||INFO -[执行爬虫定时任务，时间：2017-04-28 16:04:00,共请求牛人：1,成功请求：1,失败请求：0]-[c.c.j.c.JRQTraderInfoController]-[scheduler-2]
+2017-04-28 16:06:00.002||INFO -[执行爬虫定时任务，时间：2017-04-28 16:06:00,共请求牛人：1,成功请求：1,失败请求：0]-[c.c.j.c.JRQTraderInfoController]-[scheduler-3]
+2017-04-28 16:08:00.002||INFO -[执行爬虫定时任务，时间：2017-04-28 16:08:00,共请求牛人：1,成功请求：1,失败请求：0]-[c.c.j.c.JRQTraderInfoController]-[scheduler-4]
+2017-04-28 16:10:00.001||INFO -[执行爬虫定时任务，时间：2017-04-28 16:10:00,共请求牛人：1,成功请求：1,失败请求：0]-[c.c.j.c.JRQTraderInfoController]-[scheduler-1]
+2017-04-28 16:11:55.439||INFO -[执行爬虫定时任务，时间：2017-04-28 16:11:55,共请求牛人：1,成功请求：0,失败请求：0]-[c.c.j.c.JRQTraderInfoController]-[scheduler-3]
+2017-04-28 16:14:00.002||INFO -[执行爬虫定时任务，时间：2017-04-28 16:14:00,共请求牛人：1,成功请求：0,失败请求：0]-[c.c.j.c.JRQTraderInfoController]-[scheduler-3]
+2017-04-28 16:16:00.002||INFO -[执行爬虫定时任务，时间：2017-04-28 16:16:00,共请求牛人：1,成功请求：0,失败请求：0]-[c.c.j.c.JRQTraderInfoController]-[scheduler-7]
+2017-04-28 16:18:00.002||INFO -[执行爬虫定时任务，时间：2017-04-28 16:18:00,共请求牛人：1,成功请求：0,失败请求：0]-[c.c.j.c.JRQTraderInfoController]-[scheduler-8]
+2017-04-28 16:18:15.736||INFO -[Shutting down 'null' pool immediately [Shutdown Hook]]-[org.logicalcobwebs.proxool.null]-[Shutdown Hook]
+2017-04-28 16:18:15.736||INFO -[Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@69453e37: startup date [Fri Apr 28 16:02:28 CST 2017]; root of context hierarchy]-[o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext]-[Thread-2]
+2017-04-28 16:18:15.737||INFO -[Unregistering JMX-exposed beans on shutdown]-[o.s.j.e.a.AnnotationMBeanExporter]-[Thread-2]
+2017-04-28 16:18:15.738||INFO -[Stopping Prototyper thread]-[o.l.proxool.PrototyperController]-[Shutdown Hook]
+2017-04-28 16:18:15.738||INFO -[Stopping HouseKeeper thread]-[o.l.proxool.HouseKeeperController]-[Shutdown Hook]
+2017-04-28 16:18:15.738||INFO -[Shutting down ExecutorService 'threadPoolTaskExecutor']-[o.s.s.c.ThreadPoolTaskExecutor]-[Thread-2]
+2017-04-28 16:18:15.740||INFO -[Shutting down ExecutorService 'scheduler']-[o.s.s.c.ThreadPoolTaskScheduler]-[Thread-2]
+2017-04-28 16:18:15.741||INFO -[Shutting down ExecutorService]-[o.s.s.c.ThreadPoolTaskExecutor]-[Thread-2]
