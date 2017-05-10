@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ch.fls.dao.UserInfoMapper">
     
-    <!-- 查询牛人信息 -->
+    <!-- 查询用户信息 -->
     <select id="queryUserInfo" parameterType="java.util.Map" resultType="java.util.Map">
 		SELECT
 			a.login_name AS userName,
@@ -15,5 +15,7 @@
 			a.login_name = #{loginName}
 		OR a.phone_number = #{loginName}
     </select>
+    
+    
     
 </mapper>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ch.fls.dao.BookInfoMapper">
+    
+    <!-- 查询图书列表信息 -->
+    <select id="queryBookList" parameterType="java.util.Map" resultType="java.util.Map">
+		SELECT
+		    a.uuid bookId,
+			a.author,
+			a.book_title bookTitle,
+			a.tags,
+			a.image,
+			a.rating,
+			b.shelf_name shelfName
+		FROM
+			fls_book_info a
+		LEFT JOIN fls_book_shelf b ON a.book_shelf = b.shelf_type
+		<if test="shelfType != null and shelfType != '' ">
+		   and a.book_shelf = #{shelfType}
+		</if>
+		<if test="searchContent != null and searchContent != '' ">
+		   and a.isbn = #{searchContent}
+		   OR a.author LIKE '%'||#{searchContent}||'%'
+		   OR a.book_title LIKE '%'||#{searchContent}||'%'
+		</if>	
+    </select>
+    
+    <!-- 查询图书详情 -->
+    <select id="queryBookDetail" parameterType="java.util.Map" resultType="java.util.Map">
+		SELECT
+		    a.uuid bookId,
+			a.author,
+			a.author_intro authorIntro,
+			a.binding,
+			a.book_title bookTitle,
+			a.catalog,
+			a.image,
+			a.isbn,
+			a.is_ebook isEbook,
+			a.origin_title originTitle,
+			a.pages,
+			a.press,
+			a.price,
+			a.publication_date pubDate,
+			a.rating,
+			a.summary,
+			a.tags,
+			a.translator,
+			b.shelf_name shelfNm
+		FROM
+			fls_book_info a
+		LEFT JOIN fls_book_shelf b ON a.book_shelf = b.shelf_type
+		WHERE
+			a.uuid = #{bookId}	
+    </select>
+    
+    <!-- 新增图书阅读记录 -->
+    <insert id="addReadInfo" parameterType="java.util.Map">
+		 INSERT fls_user_book_info (
+			uuid,
+			user_uuid,
+			book_uuid,
+			read_status,
+			create_time
+		)
+		VALUES
+			(
+			#{uuid},   
+			#{userId},
+			#{bookId},
+			#{readStatus},
+			now()
+			)
+    </insert>
+    
+    <!-- 更新图书阅读状态 -->
+    <update id="updateReadStatus">
+		UPDATE fls_user_book_info a
+		SET 
+		a.read_status = #{readStatus},
+		a.update_time = now()
+		WHERE
+			a.uuid = #{readId}   
+    </update>
+    
+    <!-- 查询图书阅读记录 -->
+    <select id="queryReadBookInfo" parameterType="java.util.Map" resultType="java.util.Map">
+		SELECT
+			a.user_uuid readId,
+			a.read_status readStatus
+		FROM
+			fls_user_book_info a
+		WHERE
+			a.book_uuid = #{bookId}
+		AND a.user_uuid = #{userId}
+    </select>
+    
+</mapper>
