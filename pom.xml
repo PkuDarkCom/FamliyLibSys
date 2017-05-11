@@ -9,10 +9,10 @@
 	</parent>
 
 	<groupId>com.ch</groupId>
-	<artifactId>JRQ</artifactId>
+	<artifactId>FLS</artifactId>
 	<packaging>jar</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>jrq</name>
+	<name>fls</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<spring.version>4.3.2.RELEASE</spring.version>
@@ -143,7 +143,7 @@
 	</pluginRepositories>
 
 	<build>
-		<finalName>JRQ</finalName>
+		<finalName>FLS</finalName>
 		<plugins>
         <plugin>
             <groupId>org.springframework.boot</groupId>
@@ -172,7 +172,7 @@
             <resource>  
                 <directory>src/main/resources</directory>  
                 <includes>  
-                    <include>**/**</include>  
+                    <include>**/**</include>
                 </includes>  
                 <filtering>false</filtering>  
             </resource>  

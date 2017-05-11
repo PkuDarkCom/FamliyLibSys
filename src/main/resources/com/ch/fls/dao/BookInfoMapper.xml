@@ -11,6 +11,7 @@
 			a.tags,
 			a.image,
 			a.rating,
+			a.summary,
 			b.shelf_name shelfName
 		FROM
 			fls_book_info a
@@ -18,6 +19,7 @@
 		<if test="shelfType != null and shelfType != '' ">
 		   and a.book_shelf = #{shelfType}
 		</if>
+		where 1=1
 		<if test="searchContent != null and searchContent != '' ">
 		   and a.isbn = #{searchContent}
 		   OR a.author LIKE '%'||#{searchContent}||'%'
@@ -86,13 +88,24 @@
     <!-- 查询图书阅读记录 -->
     <select id="queryReadBookInfo" parameterType="java.util.Map" resultType="java.util.Map">
 		SELECT
-			a.user_uuid readId,
+			a.uuid readId,
 			a.read_status readStatus
 		FROM
 			fls_user_book_info a
 		WHERE
 			a.book_uuid = #{bookId}
 		AND a.user_uuid = #{userId}
+    </select>
+    
+    <!-- 查询书架列表 -->
+    <select id="querybookShelfList" parameterType="java.util.Map" resultType="java.util.Map">
+		SELECT
+			a.shelf_type shelfType,
+			a.shelf_name shelfName
+		FROM
+			fls_book_shelf a
+		WHERE
+			a. STATUS = '01'
     </select>
     
 </mapper>

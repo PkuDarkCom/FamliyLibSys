@@ -1,10 +1,11 @@
 package com.ch.fls.domain;
 
+
 public class FLSDataJSON {
 
     private Integer code;//请求返回状态 0:成功 1:失败
     private String msg;//请求返回状态描述
-    private String data;//请求返回数据
+    private Object data;//请求返回数据
     
 	public Integer getCode() {
 		return code;
@@ -18,10 +19,10 @@ public class FLSDataJSON {
 	public void setMsg(String msg) {
 		this.msg = msg;
 	}
-	public String getData() {
+	public Object getData() {
 		return data;
 	}
-	public void setData(String data) {
+	public void setData(Object data) {
 		this.data = data;
 	}
     

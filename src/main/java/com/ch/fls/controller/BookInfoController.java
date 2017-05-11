@@ -55,8 +55,25 @@ public class BookInfoController {
 		
 		dataJson.setCode(1);
 		dataJson.setMsg("查询成功");
-		dataJson.setData(JSONArray.fromObject(bookList).toString());
+		dataJson.setData(JSONArray.fromObject(bookList));
 		
+		return dataJson;
+	}
+	
+	/**
+	 * 获取书架列表
+	 * @param session
+	 * @return
+	 */
+	@RequestMapping("bookShelfList")
+	@ResponseBody
+	public FLSDataJSON bookShelfList(HttpSession session){
+		FLSDataJSON dataJson = new FLSDataJSON();
+		List<Map<String,String>> shelfList = bookInfoServiceImpl.querybookShelfList();
+		
+		dataJson.setCode(1);
+		dataJson.setMsg("查询成功");
+		dataJson.setData(JSONArray.fromObject(shelfList));
 		return dataJson;
 	}
 	
@@ -87,7 +104,7 @@ public class BookInfoController {
 		
 		dataJson.setCode(1);
 		dataJson.setMsg("查询成功");
-		dataJson.setData(JSONObject.fromObject(bookDetailInfo).toString());
+		dataJson.setData(JSONObject.fromObject(bookDetailInfo));
 		
 		return dataJson;
 	}
@@ -119,12 +136,29 @@ public class BookInfoController {
 			paramsMap.put("uuid", UUIDUtils.getUUID());			
 			bookInfoServiceImpl.addReadInfo(paramsMap);
 		}else{//更新阅读记录
-			paramsMap.put("readId", readBookInfo.get("readId"));
+			String readId = readBookInfo.get("readId");
+			String readStatus = readBookInfo.get("readStatus");
+			if(readStatus.equals("1") && operationType.equals("1")){
+				dataJson.setCode(2);
+				dataJson.setMsg("您已收藏该图书");	
+				return dataJson;
+			}else if(readStatus.equals("2")){
+				if(operationType.equals("1")){
+					dataJson.setCode(3);
+					dataJson.setMsg("您已开始阅读该图书");	
+					return dataJson;
+				}				
+			}else if(readStatus.equals("3")){
+				dataJson.setCode(4);
+				dataJson.setMsg("您已读完该图书");	
+				return dataJson;
+			}
+			paramsMap.put("readId", readStatus);
 			bookInfoServiceImpl.updateReadStatus(paramsMap);
 		}
 		
 		dataJson.setCode(1);
-		dataJson.setMsg("查询成功");		
+		dataJson.setMsg("操作成功");		
 		return dataJson;
 	}
 }

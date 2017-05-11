@@ -15,4 +15,6 @@ public interface BookInfoService {
 
 	Map<String, String> queryReadBookInfo(Map<String, String> paramsMap);
 
+	List<Map<String, String>> querybookShelfList();
+
 }

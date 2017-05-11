@@ -38,16 +38,19 @@ public class LoginController {
 		if(map == null){
 			dataJson.setCode(2);
 			dataJson.setMsg("用户名错误");
+			return dataJson;
 		}else{
 			String pwd = map.get("pwd");
 			String status = map.get("status");			
 			if(pwd != null && !pwd.equals(LoginPwd)){
 				dataJson.setCode(3);
 				dataJson.setMsg("密码错误");
+				return dataJson;
 			}
 			if(status != null && status.equals("00")){
 				dataJson.setCode(4);
 				dataJson.setMsg("用户已注销");
+				return dataJson;
 			}
 		}
 		
@@ -57,7 +60,7 @@ public class LoginController {
 		Map<String,String> data = new HashMap<String,String>();
 		data.put("userName", map.get("userName"));
 		data.put("phoneNo", map.get("phoneNo"));
-		dataJson.setData(JSONObject.fromObject(data).toString());
+		dataJson.setData(JSONObject.fromObject(data));
 		
 		return dataJson;
 	}

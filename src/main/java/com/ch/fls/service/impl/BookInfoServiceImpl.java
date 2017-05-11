@@ -39,6 +39,11 @@ public class BookInfoServiceImpl implements BookInfoService{
 	public Map<String, String> queryReadBookInfo(Map<String, String> paramsMap) {
 		return bookInfoMapper.queryReadBookInfo(paramsMap);
 	}
+
+	@Override
+	public List<Map<String, String>> querybookShelfList() {
+		return bookInfoMapper.querybookShelfList();
+	}
 	
 
 	
