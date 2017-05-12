@@ -1,0 +1,30 @@
+.ml15 {
+	margin-left: 15px;
+}
+.mt20 {
+	margin-top: 20px;
+}
+.logo-expanded {
+	color: #fff;
+}
+.form-search {
+	margin: 22px 0;
+	width: 550px;
+}
+.simple-select {
+	width: 200px;
+}
+.remote-data {
+	margin: 0 20px;
+	width: 300px;
+}
+.my-books>li {
+	padding-top: 22px!important;
+}
+.selectboxit-container .selectboxit-options a {
+	line-height: 25px !important;
+	height: 25px;
+}
+.txt-center {
+	text-align: center;
+}

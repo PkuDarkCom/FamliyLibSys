@@ -1,0 +1,56 @@
+.login {
+    padding: 30px 0 0;
+    max-width: 420px;
+    margin: 0 auto;
+    text-align: center;
+}
+.login .input-group-addon {
+    padding: 8px 0;
+    background: #f4f4f4;
+    min-width: 48px;
+    text-align: center;
+}
+.login .form-control {
+    height: 48px;
+    font-size: 15px;
+    box-shadow: none;
+}
+.login .help-block {
+    color: #b94a48;
+    text-align: left;
+}
+.login .checkbox {
+    margin-bottom: 30px;
+}
+.login input[type="submit"] {
+    padding: 10px 0 12px;
+    margin: 20px 0 30px;
+}
+.login input[type="submit"]:hover {
+    background: transparent;
+}
+.login .social-login {
+    margin-bottom: 20px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #cccccc;
+}
+.login .social-login > .btn {
+    width: 49%;
+    margin: 0;
+}
+.login .social-login .facebook {
+    background-color: #335397;
+    border-color: #335397;
+}
+.login .social-login .facebook:hover {
+    background-color: transparent;
+    color: #335397;
+}
+.login .social-login .twitter {
+    background-color: #00c7f7;
+    border-color: #00c7f7;
+}
+.login .social-login .twitter:hover {
+    background-color: transparent;
+    color: #00c7f7;
+}

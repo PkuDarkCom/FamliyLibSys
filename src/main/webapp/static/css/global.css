@@ -1,0 +1,63 @@
+body {
+    font: 14px/1.5 PingFang SC,Lantinghei SC,Helvetica Neue,Helvetica,Arial,Microsoft YaHei,\\5FAE\8F6F\96C5\9ED1,STHeitiSC-Light,simsun,\\5B8B\4F53,WenQuanYi Zen Hei,WenQuanYi Micro Hei,'sans-serif';
+    color: #333;
+    min-width: 1210px;
+    background: #eeeeee;
+}
+
+.fl-right {
+    float: right;
+}
+
+.fl-left {
+    float: left;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.txt-center {
+    text-align: center;
+}
+.italic {
+    font-style: italic;
+}
+.block {
+    display: block;
+}
+.hide {
+    display: none;
+}
+.inline {
+    display: inline-block;
+}
+.pos-relative {
+    position: relative;
+}
+.pos-abs {
+    position: absolute;
+}
+.wrapper {
+    width: 1190px;
+    margin: 0 auto;
+}
+/* button */
+.btn-primary {
+    background: #007aff;
+    border-color: #007aff;
+}
+.btn-primary:hover,
+.btn-primary.active {
+    background: transparent;
+    color: #007aff;
+    border-color: #007aff;
+}
