@@ -31,7 +31,7 @@ public class BookInfoController {
 	 */
 	@RequestMapping("bookList")
 	public String bookList(){
-		return "book/bookList";
+		return "index";
 	}	
     
 	/**
@@ -83,7 +83,7 @@ public class BookInfoController {
 	 */
 	@RequestMapping("bookDetail")
 	public String bookDetail(){
-		return "book/bookDetail";
+		return "detail";
 	}
 	
 	/**
@@ -143,7 +143,7 @@ public class BookInfoController {
 				dataJson.setMsg("您已收藏该图书");	
 				return dataJson;
 			}else if(readStatus.equals("2")){
-				if(operationType.equals("1")){
+				if(operationType.equals("1") || operationType.equals("2")){
 					dataJson.setCode(3);
 					dataJson.setMsg("您已开始阅读该图书");	
 					return dataJson;
@@ -159,6 +159,33 @@ public class BookInfoController {
 		
 		dataJson.setCode(1);
 		dataJson.setMsg("操作成功");		
+		return dataJson;
+	}
+	
+	@RequestMapping("addBookInfo")
+	@ResponseBody
+	public FLSDataJSON addBookInfo(HttpSession session,
+			@RequestParam(value = "isbn", required = true) String  isbn,
+			@RequestParam(value = "bookTitle", required = true) String  bookTitle,
+			@RequestParam(value = "originTitle", required = false) String  originTitle,
+			@RequestParam(value = "image", required = true) String  image,
+			@RequestParam(value = "author", required = true) String  author,
+			@RequestParam(value = "translator", required = false) String  translator,
+			@RequestParam(value = "press", required = false) String  press,
+			@RequestParam(value = "publicationDate", required = false) String  publicationDate,
+			@RequestParam(value = "rating", required = false) String  rating){
+		FLSDataJSON dataJson = new FLSDataJSON();
+		//组织图书信息
+//		Map<String,String> paramsMap = new HashMap<String,String>();
+//		paramsMap.put("userId", userId);
+//		paramsMap.put("bookId", bookId);
+//		paramsMap.put("readStatus", operationType);// 1:收藏(想读) 2:在读 3:已读
+//		
+//		Map<String,String> readBookInfo = bookInfoServiceImpl.queryReadBookInfo(paramsMap);
+		
+		
+		dataJson.setCode(1);
+		dataJson.setMsg("添加成功");		
 		return dataJson;
 	}
 }

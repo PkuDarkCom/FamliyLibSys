@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <script type="text/javascript" src="/javascripts/jquery.js"></script>
+    <script type="text/javascript" src="/static/asset/js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript">
         $().ready(function () {
             redirect();

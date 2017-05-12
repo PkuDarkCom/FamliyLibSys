@@ -24,7 +24,7 @@ public class LoginController {
 	
 	@RequestMapping("login")
 	public String login(){
-		return "login/login";
+		return "login";
 	}	
     
 	@RequestMapping("checkLogin")
