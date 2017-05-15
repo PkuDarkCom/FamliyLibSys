@@ -30,8 +30,7 @@ public class ReadInfoStatisticsController {
 	 * @return
 	 */
 	@RequestMapping("readInfoStatPage")
-	public String readInfoStat(){
-		
+	public String readInfoStat(){		
 		return READ_INFO_STATISTICS_PAGE;
 	}
 	

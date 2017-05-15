@@ -35,7 +35,7 @@
 <body class="page-body">
 	<div class="page-container">
 		<!-- 左侧菜单 -->
-		<!-- 在这里引入sidebar.jsp -->
+		<jsp:include page="sidebar.jsp"></jsp:include>
 		<div class="main-content">
 			<!-- 在这里引入userinfo.jsp -->
 			<div class="panel panel-default">
@@ -45,7 +45,7 @@
 			<div class="txt-center">
 				<a class="btn btn-turquoise">编辑</a>
 				<a class="btn btn-blue">开始阅读</a>
-				<a href="index.html" class="ml15 btn btn btn-info">返回首页</a>
+				<a href="/book/bookList" class="ml15 btn btn btn-info">返回首页</a>
 		</div>
 	</div>
 	<!-- Page Loading Overlay -->
@@ -63,7 +63,7 @@
 				<p>{{tags}}</p>
 				<p>{{author}} 著；</p>
 				<p>{{translator}} 译；</p>
-				<p>编号：{{bookId}}；<span class="ml15"></span> ISBN：{{isbn}}；</p>
+				<p><!--编号：{{bookId}}；<span class="ml15"></span>--> ISBN：{{isbn}}；</p>
 				<p>出版社： {{press}} <span class="ml15"></span>出版时间：{{pubDate}}；</p>
 				<p>豆瓣评分：{{rating}}；</p>
 				<p>页数：{{pages}}；</p>

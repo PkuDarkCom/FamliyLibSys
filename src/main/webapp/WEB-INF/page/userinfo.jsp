@@ -1,3 +1,7 @@
+<%@ page language="java" pageEncoding="utf-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <nav class="navbar user-info-navbar"  role="navigation">
 	<ul class="user-info-menu left-links list-inline list-unstyled">
 		<form role="form">
@@ -19,10 +23,10 @@
 	<!-- Right links for user info navbar -->
 	<ul class="user-info-menu right-links list-inline list-unstyled">
 		<li class="dropdown user-profile">
-			<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+			<a href="/book/bookList" class="dropdown-toggle" data-toggle="dropdown">
 				<img src="/static/images/user-4.png" alt="user-image" class="img-circle img-inline userpic-32" width="28" />
 				<span>
-					John Smith
+					<%=session.getAttribute("userName")%>
 					<i class="fa-angle-down"></i>
 				</span>
 			</a>

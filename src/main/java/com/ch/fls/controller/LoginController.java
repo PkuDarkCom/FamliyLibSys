@@ -66,7 +66,7 @@ public class LoginController {
 		dataJson.setData(JSONObject.fromObject(data));
 		
 		/*将用户信息放入session会话中*/
-		session.setAttribute("userInfo", data);
+		session.setAttribute("userName", map.get("userName"));
 		
 		return dataJson;
 	}

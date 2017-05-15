@@ -32,7 +32,7 @@ public class BookInfoController {
 	@RequestMapping("bookList")
 	public String bookList(){
 		return "index";
-	}	
+	}
     
 	/**
 	 * 获取图书列表数据
@@ -61,7 +61,17 @@ public class BookInfoController {
 	}
 	
 	/**
-	 * 获取书架列表
+	 * 跳转书架列表
+	 * @param session
+	 * @return
+	 */
+	@RequestMapping("bookShelfPre")
+	public String bookShelfPre(HttpSession session){
+		return "shelf";
+	}
+	
+	/**
+	 * 获取书架列表数据
 	 * @param session
 	 * @return
 	 */
@@ -217,6 +227,16 @@ public class BookInfoController {
 		dataJson.setCode(1);
 		dataJson.setMsg("操作成功");		
 		return dataJson;
+	}
+	
+	
+	/**
+	 * 跳转新增图书页面
+	 * @return
+	 */
+	@RequestMapping("addBookPre")
+	public String addBookPre(){
+		return "addBook";
 	}
 	
 	/**

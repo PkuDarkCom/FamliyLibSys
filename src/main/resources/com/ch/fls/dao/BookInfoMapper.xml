@@ -11,7 +11,7 @@
 			a.tags,
 			a.image,
 			a.rating,
-			a.summary,
+			CONCAT(trim(SUBSTR(a.summary,1,40)),'...') as summary,
 			b.shelf_name shelfName
 		FROM
 			fls_book_info a
