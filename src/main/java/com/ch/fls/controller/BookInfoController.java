@@ -78,6 +78,60 @@ public class BookInfoController {
 	}
 	
 	/**
+	 * 添加书架
+	 * @param session
+	 * @return
+	 */
+	@RequestMapping("addBookShelf")
+	@ResponseBody
+	public FLSDataJSON addBookShelf(HttpSession session,
+			@RequestParam(value = "shelfName", required = true) String  shelfName){
+		FLSDataJSON dataJson = new FLSDataJSON();		
+		bookInfoServiceImpl.addBookShell(shelfName);
+		
+		dataJson.setCode(1);
+		dataJson.setMsg("添加成功");
+		return dataJson;
+	}
+	
+	/**
+	 * 编辑书架
+	 * @param session
+	 * @return
+	 */
+	@RequestMapping("modifyBookShelf")
+	@ResponseBody
+	public FLSDataJSON modifyBookShelf(HttpSession session,
+			@RequestParam(value = "shelfName", required = false) String  shelfName,
+			@RequestParam(value = "shelfType", required = false) String  shelfType){
+		FLSDataJSON dataJson = new FLSDataJSON();
+		
+		Map<String,String> paramsMap = new HashMap<String,String>();
+		paramsMap.put("shelfType", shelfType);
+		paramsMap.put("shelfName", shelfName);
+		if(shelfName == null || shelfName.equals("")){
+			//查询该书架是否存在图书			
+			List<Map<String, String>> list = bookInfoServiceImpl.queryBookList(paramsMap);
+			if(list != null && list.size() >0){
+				dataJson.setCode(2);
+				dataJson.setMsg("该书架还存有图书记录，无法删除");
+				return dataJson;
+			}					
+			//删除书架
+			bookInfoServiceImpl.deleteBookShell(shelfType);
+		}else{			
+			//编辑数据
+			bookInfoServiceImpl.updateBookShell(paramsMap);
+		}
+			
+		dataJson.setCode(1);
+		dataJson.setMsg("操作成功");
+		return dataJson;
+	}
+	
+	
+	
+	/**
 	 * 跳转图书详情页
 	 * @return
 	 */
@@ -89,7 +143,7 @@ public class BookInfoController {
 	/**
 	 * 获取图书详情数据
 	 * @param session
-	 * @param uuid
+	 * @param bookId
 	 * @return
 	 */
 	@RequestMapping("bookDetailData")
@@ -122,8 +176,11 @@ public class BookInfoController {
 	@ResponseBody
 	public FLSDataJSON updateReadStatus(HttpSession session,
 			@RequestParam(value = "bookId", required = true) String  bookId,
-			@RequestParam(value = "userId", required = true) String  userId,
 			@RequestParam(value = "operationType", required = true) String  operationType){
+		//从session中获取用户信息
+		Map<String,String> userInfo = (Map<String, String>) session.getAttribute("userInfo");
+		String userId = userInfo.get("userId");
+		
 		FLSDataJSON dataJson = new FLSDataJSON();
 		//查询用户阅读信息
 		Map<String,String> paramsMap = new HashMap<String,String>();
@@ -153,7 +210,7 @@ public class BookInfoController {
 				dataJson.setMsg("您已读完该图书");	
 				return dataJson;
 			}
-			paramsMap.put("readId", readStatus);
+			paramsMap.put("readId", readId);
 			bookInfoServiceImpl.updateReadStatus(paramsMap);
 		}
 		
@@ -162,6 +219,29 @@ public class BookInfoController {
 		return dataJson;
 	}
 	
+	/**
+	 * 新增图书
+	 * @param session
+	 * @param isbn
+	 * @param bookTitle
+	 * @param originTitle
+	 * @param image
+	 * @param author
+	 * @param translator
+	 * @param press
+	 * @param publicationDate
+	 * @param rating
+	 * @param tags
+	 * @param binding
+	 * @param price
+	 * @param pages
+	 * @param authorIntro
+	 * @param summary
+	 * @param catalog
+	 * @param bookShelf
+	 * @param isEbook
+	 * @return
+	 */
 	@RequestMapping("addBookInfo")
 	@ResponseBody
 	public FLSDataJSON addBookInfo(HttpSession session,
@@ -173,19 +253,124 @@ public class BookInfoController {
 			@RequestParam(value = "translator", required = false) String  translator,
 			@RequestParam(value = "press", required = false) String  press,
 			@RequestParam(value = "publicationDate", required = false) String  publicationDate,
-			@RequestParam(value = "rating", required = false) String  rating){
+			@RequestParam(value = "rating", required = false) String  rating,
+			@RequestParam(value = "tags", required = false) String  tags,
+			@RequestParam(value = "binding", required = false) String  binding,
+			@RequestParam(value = "price", required = false) String  price,
+			@RequestParam(value = "pages", required = false) String  pages,
+			@RequestParam(value = "authorIntro", required = true) String  authorIntro,
+			@RequestParam(value = "summary", required = true) String  summary,
+			@RequestParam(value = "catalog", required = false) String  catalog,
+			@RequestParam(value = "bookShelf", required = true) String  bookShelf,
+			@RequestParam(value = "isEbook", required = true) String  isEbook){
 		FLSDataJSON dataJson = new FLSDataJSON();
 		//组织图书信息
-//		Map<String,String> paramsMap = new HashMap<String,String>();
-//		paramsMap.put("userId", userId);
-//		paramsMap.put("bookId", bookId);
-//		paramsMap.put("readStatus", operationType);// 1:收藏(想读) 2:在读 3:已读
-//		
-//		Map<String,String> readBookInfo = bookInfoServiceImpl.queryReadBookInfo(paramsMap);
-		
-		
+		Map<String,String> paramsMap = new HashMap<String,String>();
+		paramsMap.put("uuid", UUIDUtils.getUUID());	
+		//必须项
+		paramsMap.put("isbn", isbn);
+		paramsMap.put("bookTitle", bookTitle);
+		paramsMap.put("image", image);
+		paramsMap.put("author", author);
+		paramsMap.put("authorIntro", authorIntro);
+		paramsMap.put("summary", summary);
+		paramsMap.put("bookShelf", bookShelf);
+		paramsMap.put("isEbook", isEbook);
+		//非必须项
+		paramsMap.put("originTitle", originTitle);		
+		paramsMap.put("translator", translator);
+		paramsMap.put("press", press);
+		paramsMap.put("publicationDate", publicationDate);
+		paramsMap.put("rating", rating);
+		paramsMap.put("tags", tags);
+		paramsMap.put("binding", binding);
+		paramsMap.put("price", price);
+		paramsMap.put("pages", pages);		
+		paramsMap.put("catalog", catalog);
+				
+		//添加图书
+		bookInfoServiceImpl.addBookInfo(paramsMap);
+				
 		dataJson.setCode(1);
 		dataJson.setMsg("添加成功");		
+		return dataJson;
+	}
+	
+	/**
+	 * 编辑图书
+	 * @param session
+	 * @param isbn
+	 * @param bookTitle
+	 * @param originTitle
+	 * @param image
+	 * @param author
+	 * @param translator
+	 * @param press
+	 * @param publicationDate
+	 * @param rating
+	 * @param tags
+	 * @param binding
+	 * @param price
+	 * @param pages
+	 * @param authorIntro
+	 * @param summary
+	 * @param catalog
+	 * @param bookShelf
+	 * @param isEbook
+	 * @return
+	 */
+	@RequestMapping("modifyBookInfo")
+	@ResponseBody
+	public FLSDataJSON modifyBookInfo(HttpSession session,
+			@RequestParam(value = "bookId", required = true) String  bookId,
+			@RequestParam(value = "isbn", required = true) String  isbn,
+			@RequestParam(value = "bookTitle", required = true) String  bookTitle,
+			@RequestParam(value = "originTitle", required = false) String  originTitle,
+			@RequestParam(value = "image", required = true) String  image,
+			@RequestParam(value = "author", required = true) String  author,
+			@RequestParam(value = "translator", required = false) String  translator,
+			@RequestParam(value = "press", required = false) String  press,
+			@RequestParam(value = "publicationDate", required = false) String  publicationDate,
+			@RequestParam(value = "rating", required = false) String  rating,
+			@RequestParam(value = "tags", required = false) String  tags,
+			@RequestParam(value = "binding", required = false) String  binding,
+			@RequestParam(value = "price", required = false) String  price,
+			@RequestParam(value = "pages", required = false) String  pages,
+			@RequestParam(value = "authorIntro", required = true) String  authorIntro,
+			@RequestParam(value = "summary", required = true) String  summary,
+			@RequestParam(value = "catalog", required = false) String  catalog,
+			@RequestParam(value = "bookShelf", required = true) String  bookShelf,
+			@RequestParam(value = "isEbook", required = true) String  isEbook){
+		FLSDataJSON dataJson = new FLSDataJSON();
+		//组织图书信息
+		Map<String,String> paramsMap = new HashMap<String,String>();
+		paramsMap.put("bookId", bookId);	
+		//必须项
+		paramsMap.put("isbn", isbn);
+		paramsMap.put("bookTitle", bookTitle);
+		paramsMap.put("image", image);
+		paramsMap.put("author", author);
+		paramsMap.put("authorIntro", authorIntro);
+		paramsMap.put("summary", summary);
+		paramsMap.put("bookShelf", bookShelf);
+		paramsMap.put("isEbook", isEbook);
+		//非必须项
+		paramsMap.put("originTitle", originTitle);		
+		paramsMap.put("translator", translator);
+		paramsMap.put("press", press);
+		paramsMap.put("publicationDate", publicationDate);
+		paramsMap.put("rating", rating);
+		paramsMap.put("tags", tags);
+		paramsMap.put("binding", binding);
+		paramsMap.put("price", price);
+		paramsMap.put("pages", pages);		
+		paramsMap.put("catalog", catalog);
+				
+		//更新图书
+		bookInfoServiceImpl.updateBookInfo(paramsMap);
+				
+		dataJson.setCode(1);
+		dataJson.setMsg("更新成功");		
 		return dataJson;
 	}
 }

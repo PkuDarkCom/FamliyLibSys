@@ -18,6 +18,16 @@ public class UserInfoServiceImpl implements UserInfoService{
 		return userInfoMapper.queryUserInfo(loginName);
 	}
 
+	@Override
+	public Map<String, String> queryUserRegisterInfo(Map<String, String> paramsMap) {
+		return userInfoMapper.queryUserRegisterInfo(paramsMap);
+	}
+
+	@Override
+	public void addUserInfo(Map<String, String> paramsMap) {
+		userInfoMapper.addUserInfo(paramsMap);
+	}
+
 	
 
 }

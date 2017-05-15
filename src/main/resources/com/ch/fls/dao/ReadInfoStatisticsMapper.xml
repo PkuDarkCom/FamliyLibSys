@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ch.fls.dao.ReadInfoStatisticsMapper">
+    
+    <select id="queryReadInfoByUserId" parameterType="java.util.Map" resultType="java.util.Map">
+    	<![CDATA[
+    	    select a.read_status readStatus,
+    	           count(0) num
+    		 from  fls_user_book_info a 
+    		where  a.user_uuid = #{userId} 
+    	 group by  a.read_status
+    	 order by  a.read_status
+    	]]>
+    </select>
+    
+    <select id="queryReadInfoByWeek" parameterType="java.util.Map" resultType="int">
+    	<![CDATA[
+    		SELECT count(0) weekCount 
+    		  FROM fls_user_book_info 
+    		 WHERE YEARWEEK(date_format(update_time,'%Y-%m-%d')) = YEARWEEK(now()) 
+    		   AND read_status = '3'
+    		   AND user_uuid = #{userId} 
+    	]]>
+    </select>
+    
+    <select id="queryReadInfoByMonth" parameterType="java.util.Map" resultType="int">
+    	<![CDATA[
+    		select count(0) monthCount 
+    		  from fls_user_book_info 
+    		 where date_format(update_time,'%Y-%m')=date_format(now(),'%Y-%m') 
+    		 and read_status = '3'
+    		 and user_uuid = #{userId} 
+    	]]>
+    </select>
+    
+    <select id="queryReadInfoByYear" parameterType="java.util.Map" resultType="int">
+    	<![CDATA[
+    		SELECT count(0) yearCount 
+    		  FROM fls_user_book_info 
+    		 WHERE YEAR(update_time) = YEAR(NOW()) 
+    		 AND read_status = '3' 
+    		 AND user_uuid = #{userId} 
+    	]]>
+    </select>
+    
+    
+</mapper>

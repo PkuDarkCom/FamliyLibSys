@@ -1,0 +1,159 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>阅读信息统计</title>
+        <link rel="stylesheet" href="../static/asset/css/fonts/linecons/css/linecons.css">
+        <link rel="stylesheet" href="../static/asset/css/fonts/fontawesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../static/asset/css/bootstrap.css">
+        <link rel="stylesheet" href="../static/asset/css/xenon-core.css">
+        <link rel="stylesheet" href="../static/asset/css/xenon-forms.css">
+        <link rel="stylesheet" href="../static/asset/css/xenon-components.css">
+        <link rel="stylesheet" href="../static/asset/css/xenon-skins.css">
+        <link rel="stylesheet" href="../static/asset/css/custom.css">
+
+        <link href="../static/css/animate.min.css" rel="stylesheet">
+        <link href="../static/css/style.min862f.css" rel="stylesheet">
+	</head>
+	<body class="page-body">
+        <div class="page-container">
+            <!-- 左侧菜单 -->
+            <div class="sidebar-menu toggle-others fixed">
+                <div class="sidebar-menu-inner">
+                    <header class="logo-env">
+            
+                        <!-- logo -->
+                        <div class="logo">
+                            <a href="dashboard-1.html" class="logo-expanded">
+                                家庭图书管理系统
+                            </a>
+            
+                            <a href="dashboard-1.html" class="logo-collapsed">
+                                <img src="../static/images/logo-collapsed@2x.png" width="40" alt="" />
+                            </a>
+                        </div>
+            
+                        <!-- This will toggle the mobile menu and will be visible only on mobile devices -->
+                        <div class="mobile-menu-toggle visible-xs">
+                            <a href="#" data-toggle="user-info-menu">
+                                <i class="fa-bell-o"></i>
+                                <span class="badge badge-success">7</span>
+                            </a>
+            
+                            <a href="#" data-toggle="mobile-menu">
+                                <i class="fa-bars"></i>
+                            </a>
+                        </div>
+            
+                        <!-- This will open the popup with user profile settings, you can use for any purpose, just be creative -->
+                        <div class="settings-icon">
+                            <a href="#" data-toggle="settings-pane" data-animate="true">
+                                <i class="linecons-cog"></i>
+                            </a>
+                        </div>
+                    </header>
+                    <ul id="main-menu" class="main-menu">
+                        <li>
+                            <a href="index.html">
+                                <i class="linecons-cog"></i>
+                                <span class="title">首页</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="myBooks.html">
+                                <i class="linecons-desktop"></i>
+                                <span class="title">图书管理</span>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="addBook.html">新增图书</a>
+                                </li>
+                                <li>
+                                    <a href="editBook.html">编辑图书</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="shelf.html">
+                                <i class="linecons-note"></i>
+                                <span class="title">书架管理</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="readInfoStatistics.html">
+                                <i class="linecons-note"></i>
+                                <span class="title">阅读信息统计</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main-content">
+                <nav class="navbar user-info-navbar"  role="navigation">
+                    <!-- Right links for user info navbar -->
+                    <ul class="user-info-menu right-links list-inline list-unstyled">
+                        <li class="dropdown user-profile">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="../static/images/user-4.png" alt="user-image" class="img-circle img-inline userpic-32" width="28" />
+                                <span>
+                                    John Smith
+                                    <i class="fa-angle-down"></i>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu user-profile-menu list-unstyled">
+                                <li class="last">
+                                    <a href="extra-lockscreen.html">
+                                        <i class="fa-lock"></i>
+                                        Logout
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="panel panel-default panel-headerless">
+                    <div class="panel-body layout-variants">
+                        <div class="animated fadeInRight row">
+                            <div class="col-sm-5">
+                                <div class="ibox float-e-margins">
+                                    <div class="ibox-title">
+                                       
+                                    </div>
+                                    <div class="ibox-content">
+                                        <div class="echarts" id="pieChart"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-5">
+                                <div class="ibox float-e-margins">
+                                    <div class="ibox-title">
+                                        
+                                    </div>
+                                    <div class="ibox-content">
+                                        <div class="echarts" id="barChart"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Loading Overlay -->
+        <div class="page-loading-overlay">
+            <div class="loader-2"></div>
+        </div>
+        <script src="../static/asset/js/jquery-1.11.1.min.js"></script>
+        <script src="../static/asset/js/resizeable.js"></script>
+        <script src="../static/asset/js/joinable.js"></script>
+        <script src="../static/asset/js/select2/select2.min.js"></script>
+        <script src="../static/asset/js/jquery-ui/jquery-ui.min.js"></script>
+        <script src="../static/asset/js/multiselect/js/jquery.multi-select.js"></script>
+        <script src="../static/asset/js/xenon-custom.js"></script>
+        <script src="../static/asset/js/bootstrap.min.js"></script>
+        <script src="../static/asset/js/echarts.js"></script>
+        <script src="../static/asset/js/content.min.js"></script>
+        <script src="../static/js/readinfostatistics.js"></script>
+    </body>
+</html>

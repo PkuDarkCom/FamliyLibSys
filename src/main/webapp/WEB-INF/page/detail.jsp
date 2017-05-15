@@ -9,7 +9,7 @@
 	<meta name="description" content="Xenon Boostrap Admin Panel" />
 	<meta name="author" content="" />
 
-	<title>新增家庭图书</title>
+	<title>家庭图书详情</title>
 
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Arimo:400,700,400italic">
 	<link rel="stylesheet" href="../static/asset/css/fonts/linecons/css/linecons.css">
@@ -25,9 +25,11 @@
 	<link rel="stylesheet" href="../static/asset/js/select2/select2-bootstrap.css">
 	<link rel="stylesheet" href="../static/asset/js/multiselect/css/multi-select.css">
 	<link rel="stylesheet" href="../static/css/style.css">
+	
 
 	<script src="../static/asset/js/jquery-1.11.1.min.js"></script>
 	<script src="../static/asset/js/handlebars.min.js"></script>
+	<script src="/static/asset/js/bootstrap.min.js"></script>
 
 </head>
 <body class="page-body">

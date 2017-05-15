@@ -5,6 +5,7 @@
     <!-- 查询用户信息 -->
     <select id="queryUserInfo" parameterType="java.util.Map" resultType="java.util.Map">
 		SELECT
+		    a.uuid AS userId,
 			a.login_name AS userName,
 			a.login_pwd AS pwd,
 			a.phone_number AS phoneNo,
@@ -16,6 +17,37 @@
 		OR a.phone_number = #{loginName}
     </select>
     
+    <!-- 查询用户名或手机是否已注册 -->
+    <select id="queryUserRegisterInfo" parameterType="java.util.Map" resultType="java.util.Map">
+		SELECT
+		    a.login_name as userName,
+            a.phone_number as phoneNo
+		FROM
+			fls_user_info a
+		WHERE
+			a.login_name = #{userName}
+		OR a.phone_number = #{phoneNo}
+    </select>
     
+    <!-- 新增注册用户 -->
+    <select id="addUserInfo">
+		INSERT fls_user_info (
+			uuid,
+			login_name,
+			login_pwd,
+			status,
+			phone_number,
+            create_time
+		)
+		VALUES
+			(
+			#{uuid},   
+			#{userName},
+			#{password},
+			'01',
+            #{phoneNo},
+			now()
+			)
+    </select>
     
 </mapper>

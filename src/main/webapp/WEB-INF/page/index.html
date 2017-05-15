@@ -8,7 +8,7 @@
 	<meta name="description" content="Xenon Boostrap Admin Panel" />
 	<meta name="author" content="" />
 
-	<title>我的图书</title>
+	<title>家庭图书管理系统</title>
 
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Arimo:400,700,400italic">
 	<link rel="stylesheet" href="../static/asset/css/fonts/linecons/css/linecons.css">
@@ -23,9 +23,10 @@
 	<link rel="stylesheet" href="../static/asset/js/select2/select2.css">
 	<link rel="stylesheet" href="../static/asset/js/select2/select2-bootstrap.css">
 	<link rel="stylesheet" href="../static/asset/js/multiselect/css/multi-select.css">
-	<link rel="stylesheet" href="../static/css/index.css">
+	<link rel="stylesheet" href="../static/css/style.css">
 
 	<script src="../static/asset/js/jquery-1.11.1.min.js"></script>
+	<script src="../static/asset/js/handlebars.min.js"></script>
 
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
@@ -73,7 +74,7 @@
 					</div>
 				</header>
 				<ul id="main-menu" class="main-menu">
-					<li class="active opened active">
+					<li class="active opened">
 						<a href="index.html">
 							<i class="linecons-cog"></i>
 							<span class="title">首页</span>
@@ -84,6 +85,14 @@
 							<i class="linecons-desktop"></i>
 							<span class="title">图书管理</span>
 						</a>
+						<ul>
+							<li>
+								<a href="addBook.html">新增图书</a>
+							</li>
+							<li>
+								<a href="editBook.html">编辑图书</a>
+							</li>
+						</ul>
 					</li>
 					<li>
 						<a href="shelf.html">
@@ -96,72 +105,25 @@
 		</div>
 		<div class="main-content">
 			<nav class="navbar user-info-navbar"  role="navigation">
-				<ul class="user-info-menu left-links list-inline list-unstyled my-books">
-					<li>
-						<div class="form-group simple-select pull-left ml15">
-							<script type="text/javascript">
-								jQuery(document).ready(function($)
-								{
-									$("#sboxit-2").selectBoxIt({
-										showFirstOption: false
-									}).on('open', function()
-									{
-										// Adding Custom Scrollbar
-										$(this).data('selectBoxSelectBoxIt').list.perfectScrollbar();
-									});
-								});
-							</script>
-							
-							<select class="form-control" id="sboxit-2">
-								<option>阅读状态</option>
-								<option value="al">在读</option>
-								<option value="au">已读</option>
-								<option value="bd">想读</option>
-							</select>
+				<ul class="user-info-menu left-links list-inline list-unstyled">
+					<form role="form">
+						<div class="form-group form-search">
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="searchContent" placeholder="可输入ISBN/书名/作者进行查询">
+							</div>
+							<div class="col-sm-3">
+								<select class="ml15 form-control" id="shelf-select">
+									<option value="">按书架选择</option>
+									<option value="1">已读</option>
+									<option value="2">阅读中</option>
+									<option value="0">未读</option>
+								</select>
+							</div>
+							<div class="col-sm-1">
+								<span class="btn btn-blue" id="btnSearch">搜索</span>
+							</div>
 						</div>
-					</li>
-					<li>
-						<div class="form-group remote-data">
-							<script type="text/javascript">
-								jQuery(document).ready(function($)
-								{
-									$("#s2example-4").select2({
-										minimumInputLength: 1,
-										placeholder: '请输入图书相关信息',
-										ajax: {
-											url: "data/select2-remote-data.php",
-											dataType: 'json',
-											quietMillis: 100,
-											data: function(term, page) {
-												return {
-													limit: -1,
-													q: term
-												};
-											},
-											results: function(data, page ) {
-												return { results: data }
-											}
-										},
-										formatResult: function(student) { 
-											return "<div class='select2-user-result'>" + student.name + "</div>"; 
-										},
-										formatSelection: function(student) { 
-											return  student.name; 
-										}
-										
-									});
-								});
-							</script>
-							
-							<input type="hidden" name="s2example-4" id="s2example-4" />
-								
-						</div>
-					</li>
-					<li>
-						<div class="form-group pull-right">
-							<span class="ml15 btn btn-blue">查询</span>
-						</div>
-					</li>
+					</form>
 				</ul>
 				<!-- Right links for user info navbar -->
 				<ul class="user-info-menu right-links list-inline list-unstyled">
@@ -184,8 +146,12 @@
 					</li>
 				</ul>
 			</nav>
+			<!-- 图书列表 -->
 			<div class="panel panel-default panel-headerless">
 				<div class="panel-body layout-variants">
+					<div class="row" id="bookList">
+
+					</div>
 				</div>
 			</div>
 		</div>
@@ -194,17 +160,43 @@
 	<div class="page-loading-overlay">
 		<div class="loader-2"></div>
 	</div>
-	<!-- Imported scripts on this page -->
-	
+	<!-- Handlebars.js 模板 -->
+	<script id="booksTemplate" type="text/x-handlebars-template">
+		{{#each data}}
+			<div class="col-sm-4">
+				<div class="layout-variant">
+					<a href="detail.html?bid={{bookId}}">
+						<div class="layout-img">
+								<img src="{{image}}" />
+						</div>
+						<div class="layout-name">
+							{{bookTitle}}{{@index}}
+						</div>
+						<ul class="layout-links">
+							<li>
+								作者：{{author}}
+							</li>
+							<li>
+								简介：{{summary}}
+							</li>
+						</ul>
+					</a>
+				</div>
+			</div>
+			{{#ifThird @index}}
+                <div class="clearfix"></div>
+            {{/ifThird}}
+      {{/each}}
+	</script>
+	<script src="../static/asset/js/TweenMax.min.js"></script>
 	<script src="../static/asset/js/resizeable.js"></script>
 	<script src="../static/asset/js/joinable.js"></script>
-
-	<script src="../static/asset/js/select2/select2.min.js"></script>
 	<script src="../static/asset/js/jquery-ui/jquery-ui.min.js"></script>
-	<script src="../static/asset/js/selectboxit/jquery.selectBoxIt.min.js"></script>
+	<script src="../static/asset/js/select2/select2.min.js"></script>
 	<script src="../static/asset/js/multiselect/js/jquery.multi-select.js"></script>
-
+	<script src="../static/asset/js/selectboxit/jquery.selectBoxIt.min.js"></script>
 	<script src="../static/asset/js/xenon-custom.js"></script>
-
+	<script src="../static/js/common.js"></script>
+	<script src="../static/js/index.js"></script>
 </body>
 </html>

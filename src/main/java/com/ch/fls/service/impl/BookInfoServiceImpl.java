@@ -44,8 +44,30 @@ public class BookInfoServiceImpl implements BookInfoService{
 	public List<Map<String, String>> querybookShelfList() {
 		return bookInfoMapper.querybookShelfList();
 	}
-	
 
-	
+	@Override
+	public void addBookShell(String shelfName) {
+		bookInfoMapper.addBookShell(shelfName);
+	}
+
+	@Override
+	public void deleteBookShell(String shelfType) {
+		bookInfoMapper.deleteBookShell(shelfType);
+	}
+
+	@Override
+	public void updateBookShell(Map<String, String> paramsMap) {
+		bookInfoMapper.updateBookShell(paramsMap);
+	}
+
+	@Override
+	public void addBookInfo(Map<String, String> paramsMap) {
+		bookInfoMapper.addBookInfo(paramsMap);
+	}
+
+	@Override
+	public void updateBookInfo(Map<String, String> paramsMap) {
+		bookInfoMapper.updateBookInfo(paramsMap);
+	}	
 
 }

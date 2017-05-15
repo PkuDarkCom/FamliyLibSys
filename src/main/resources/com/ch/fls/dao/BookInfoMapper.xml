@@ -15,7 +15,7 @@
 			b.shelf_name shelfName
 		FROM
 			fls_book_info a
-		LEFT JOIN fls_book_shelf b ON a.book_shelf = b.shelf_type
+		LEFT JOIN fls_book_shelf b ON a.book_shelf = b.id
 		<if test="shelfType != null and shelfType != '' ">
 		   and a.book_shelf = #{shelfType}
 		</if>
@@ -51,7 +51,7 @@
 			b.shelf_name shelfNm
 		FROM
 			fls_book_info a
-		LEFT JOIN fls_book_shelf b ON a.book_shelf = b.shelf_type
+		LEFT JOIN fls_book_shelf b ON a.book_shelf = b.id
 		WHERE
 			a.uuid = #{bookId}	
     </select>
@@ -100,12 +100,115 @@
     <!-- 查询书架列表 -->
     <select id="querybookShelfList" parameterType="java.util.Map" resultType="java.util.Map">
 		SELECT
-			a.shelf_type shelfType,
+			a.id shelfType,
 			a.shelf_name shelfName
 		FROM
 			fls_book_shelf a
 		WHERE
-			a. STATUS = '01'
+			a. STATUS = '1'
     </select>
+    
+    <!-- 新增书架 -->
+    <select id="addBookShelf" parameterType="String">
+		INSERT fls_book_shelf (
+			shelf_name,
+			status,
+			create_time
+		)
+		VALUES
+			(
+			#{shelfName},   
+			'1',
+			now()
+			)
+    </select>
+    
+    <!-- 更新书架状态 -->
+    <update id="deleteBookShell">
+		UPDATE fls_book_shelf a
+		SET a. STATUS = '00'
+		WHERE
+			a.id = #{shelfType}		 
+    </update>
+    
+    <!-- 更新书架信息 -->
+    <update id="updateBookShell">
+		UPDATE fls_book_shelf a
+		SET a.shelf_name = #{shelfName}
+		WHERE
+			a.id = #{shelfType}	 
+    </update>
+    
+    <!-- 新增图书 -->
+    <insert id="addBookInfo" parameterType="java.util.Map">
+		INSERT fls_book_info (
+			uuid,
+			isbn,
+			book_title,
+			origin_title,
+			image,
+			author,
+			translator,
+			press,
+			publication_date,
+			rating,
+			tags,
+			binding,
+			price,
+			pages,
+			author_intro,
+			summary,
+			catalog,
+			book_shelf,
+			is_ebook
+		)
+		VALUES
+			(
+			#{uuid},   
+			#{isbn},
+			#{bookTitle},
+			#{originTitle}, 
+			#{image},
+			#{author},
+			#{translator},
+			#{press},
+			#{publicationDate},
+			#{rating},
+			#{tags},
+			#{binding},
+			#{price},
+			#{pages},
+			#{authorIntro},
+			#{summary},
+			#{catalog},
+			#{bookShelf},
+			#{isEbook}
+			)
+    </insert>
+    
+    <!-- 更新图书 -->
+    <update id="updateBookInfo" parameterType="java.util.Map">
+		UPDATE fls_book_info
+		SET isbn = #{isbn}, 
+		book_title = #{bookTitle},
+		origin_title = #{originTitle},
+		image = #{image},
+		author = #{author},
+		translator = #{translator},
+		press = #{press},
+		publication_date = #{publicationDate},
+		rating = #{rating},
+		tags = #{tags},
+		binding = #{binding},
+		price = #{price},
+		pages = #{pages},
+		author_intro = #{authorIntro},
+		summary = #{summary},
+		catalog = #{catalog},
+		book_shelf = #{bookShelf},
+		is_ebook = #{isEbook}
+		WHERE
+			uuid = #{bookId}    
+    </update>
     
 </mapper>

@@ -12,22 +12,23 @@
 	<title>家庭图书管理系统</title>
 
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Arimo:400,700,400italic">
-	<link rel="stylesheet" href="../static/asset/css/fonts/linecons/css/linecons.css">
-	<link rel="stylesheet" href="../static/asset/css/fonts/fontawesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="../static/asset/css/bootstrap.css">
-	<link rel="stylesheet" href="../static/asset/css/xenon-core.css">
-	<link rel="stylesheet" href="../static/asset/css/xenon-forms.css">
-	<link rel="stylesheet" href="../static/asset/css/xenon-components.css">
-	<link rel="stylesheet" href="../static/asset/css/xenon-skins.css">
-	<link rel="stylesheet" href="../static/asset/css/custom.css">
+	<link rel="stylesheet" href="/static/asset/css/fonts/linecons/css/linecons.css">
+	<link rel="stylesheet" href="/static/asset/css/fonts/fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/static/asset/css/bootstrap.css">
+	<link rel="stylesheet" href="/static/asset/css/xenon-core.css">
+	<link rel="stylesheet" href="/static/asset/css/xenon-forms.css">
+	<link rel="stylesheet" href="/static/asset/css/xenon-components.css">
+	<link rel="stylesheet" href="/static/asset/css/xenon-skins.css">
+	<link rel="stylesheet" href="/static/asset/css/custom.css">
 	<!-- Imported styles on this page -->
-	<link rel="stylesheet" href="../static/asset/js/select2/select2.css">
-	<link rel="stylesheet" href="../static/asset/js/select2/select2-bootstrap.css">
-	<link rel="stylesheet" href="../static/asset/js/multiselect/css/multi-select.css">
-	<link rel="stylesheet" href="../static/css/style.css">
+	<link rel="stylesheet" href="/static/asset/js/select2/select2.css">
+	<link rel="stylesheet" href="/static/asset/js/select2/select2-bootstrap.css">
+	<link rel="stylesheet" href="/static/asset/js/multiselect/css/multi-select.css">
+	<link rel="stylesheet" href="/static/css/style.css">
 
-	<script src="../static/asset/js/jquery-1.11.1.min.js"></script>
-	<script src="../static/asset/js/handlebars.min.js"></script>
+	<script src="/static/asset/js/jquery-1.11.1.min.js"></script>
+	<script src="/static/asset/js/handlebars.min.js"></script>
+	<script src="/static/asset/js/bootstrap.min.js"></script>
 
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
@@ -51,7 +52,7 @@
 						</a>
 		
 						<a href="/book/bookList" class="logo-collapsed">
-							<img src="../static/images/logo-collapsed@2x.png" width="40" alt="" />
+							<img src="/static/images/logo-collapsed@2x.png" width="40" alt="" />
 						</a>
 					</div>
 		
@@ -114,8 +115,7 @@
 							</div>
 							<div class="col-sm-3">
 								<select class="ml15 form-control" id="shelf-select">
-									<option value="">按书架选择</option>
-									
+									<option value="">按书架选择</option>									
 								</select>
 							</div>
 							<div class="col-sm-1">
@@ -128,7 +128,7 @@
 				<ul class="user-info-menu right-links list-inline list-unstyled">
 					<li class="dropdown user-profile">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-							<img src="../static/images/user-4.png" alt="user-image" class="img-circle img-inline userpic-32" width="28" />
+							<img src="/static/images/user-4.png" alt="user-image" class="img-circle img-inline userpic-32" width="28" />
 							<span>
 								John Smith
 								<i class="fa-angle-down"></i>
@@ -136,9 +136,9 @@
 						</a>
 						<ul class="dropdown-menu user-profile-menu list-unstyled">
 							<li class="last">
-								<a href="extra-lockscreen.html">
+								<a href="/login/exit">
 									<i class="fa-lock"></i>
-									Logout
+									退出
 								</a>
 							</li>
 						</ul>
@@ -164,12 +164,12 @@
 		{{#each data}}
 			<div class="col-sm-4">
 				<div class="layout-variant">
-					<a href="detail.html?bid={{bookId}}">
+					<a href="/book/bookDetail?bid={{bookId}}">
 						<div class="layout-img">
 								<img src="{{image}}" />
 						</div>
 						<div class="layout-name">
-							{{bookTitle}}{{@index}}
+							{{bookTitle}}
 						</div>
 						<ul class="layout-links">
 							<li>
@@ -187,15 +187,15 @@
             {{/ifThird}}
       {{/each}}
 	</script>
-	<script src="../static/asset/js/TweenMax.min.js"></script>
-	<script src="../static/asset/js/resizeable.js"></script>
-	<script src="../static/asset/js/joinable.js"></script>
-	<script src="../static/asset/js/jquery-ui/jquery-ui.min.js"></script>
-	<script src="../static/asset/js/select2/select2.min.js"></script>
-	<script src="../static/asset/js/multiselect/js/jquery.multi-select.js"></script>
-	<script src="../static/asset/js/selectboxit/jquery.selectBoxIt.min.js"></script>
-	<script src="../static/asset/js/xenon-custom.js"></script>
-	<script src="../static/js/common.js"></script>
-	<script src="../static/js/index.js"></script>
+	<script src="/static/asset/js/TweenMax.min.js"></script>
+	<script src="/static/asset/js/resizeable.js"></script>
+	<script src="/static/asset/js/joinable.js"></script>
+	<script src="/static/asset/js/jquery-ui/jquery-ui.min.js"></script>
+	<script src="/static/asset/js/select2/select2.min.js"></script>
+	<script src="/static/asset/js/multiselect/js/jquery.multi-select.js"></script>
+	<script src="/static/asset/js/selectboxit/jquery.selectBoxIt.min.js"></script>
+	<script src="/static/asset/js/xenon-custom.js"></script>
+	<script src="/static/js/common.js"></script>
+	<script src="/static/js/index.js"></script>
 </body>
 </html>
