@@ -44,10 +44,8 @@
 				</a>
 			</li>
 			<li class="<%if(active=='detail' || active=='addBook') { %>opened<%}%> <%if(active=='index'){ %>active<%}%>">
-				<a href="/book/bookList">
-					<i class="linecons-desktop"></i>
-					<span class="title">图书管理</span>
-				</a>
+				<i class="linecons-desktop"></i>
+				<span class="title">图书管理</span>
 				<ul>
 					<li <%if(active=='addBook') {%>class="active"<%}%>>
 						<a href="/book/addBookPre">新增图书</a>
