@@ -217,7 +217,7 @@
 		            }
 		        });
 		    }
-		    //getShelf();
+		    getShelf();
 		});
 	</script>
 
