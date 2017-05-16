@@ -37,19 +37,25 @@
 			</div>
 		</header>
 		<ul id="main-menu" class="main-menu">
-			<li>
+			<%=request.getParameter("active")%>
+			<li <c:if test="${requestScope.active=='index'}">class="active"</c:if> >
 				<a href="/book/bookList">
 					<i class="linecons-cog"></i>
 					<span class="title">首页</span>
 				</a>
 			</li>
-			<li class="opened">
-				<a href="/book/bookList">
-					<i class="linecons-desktop"></i>
-					<span class="title">图书管理</span>
-				</a>
+				<c:choose>
+				   <c:when test="${requestScope.active=='detail' || requestScope.active=='addBook'}"> 
+				   <li  class="opened"   >
+				   </c:when>
+				   <c:otherwise>
+				   <li  class="active"  >
+				   </c:otherwise>
+				</c:choose>			
+				<i class="linecons-desktop"></i>
+				<span class="title">图书管理</span>
 				<ul>
-					<li class="active">
+				<li <c:if test="${requestScope.active=='addBook'}">class="active"</c:if> >
 						<a href="/book/addBookPre">新增图书</a>
 					</li>
 					<!-- <li>
@@ -57,13 +63,13 @@
 					</li> -->
 				</ul>
 			</li>
-			<li>
+			<li <c:if test="${requestScope.active=='shelf'}">class="active"</c:if> >
 				<a href="/book/bookShelfPre">
 					<i class="linecons-note"></i>
 					<span class="title">书架管理</span>
 				</a>
 			</li>
-            <li>
+			<li <c:if test="${requestScope.active=='statistics'}">class="active"</c:if> >
                 <a href="/read/readInfoStatPage">
                     <i class="linecons-note"></i>
                     <span class="title">阅读信息统计</span>

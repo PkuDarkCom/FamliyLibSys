@@ -97,7 +97,7 @@ public class BookInfoController {
 	public FLSDataJSON addBookShelf(HttpSession session,
 			@RequestParam(value = "shelfName", required = true) String  shelfName){
 		FLSDataJSON dataJson = new FLSDataJSON();		
-		bookInfoServiceImpl.addBookShell(shelfName);
+		bookInfoServiceImpl.addBookShelf(shelfName);
 		
 		dataJson.setCode(1);
 		dataJson.setMsg("添加成功");
@@ -128,10 +128,10 @@ public class BookInfoController {
 				return dataJson;
 			}					
 			//删除书架
-			bookInfoServiceImpl.deleteBookShell(shelfType);
+			bookInfoServiceImpl.deleteBookShelf(shelfType);
 		}else{			
 			//编辑数据
-			bookInfoServiceImpl.updateBookShell(paramsMap);
+			bookInfoServiceImpl.updateBookShelf(paramsMap);
 		}
 			
 		dataJson.setCode(1);

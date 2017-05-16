@@ -15,6 +15,10 @@
 <body>
     <div class="login">
         <form>
+          <a href="#"><img width="320" height="150" src="/static/images/banner2.jpg" /></a>
+          <div class="help-block" id="fromMsg"></div>  
+          <p>家庭图书管理系统</p>   
+          <div class="help-block" id="fromMsg"></div> 
           <div class="form-group">
             <div class="input-group">
                 <span class="input-group-addon">

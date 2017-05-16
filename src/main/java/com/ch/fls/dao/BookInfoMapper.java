@@ -17,11 +17,11 @@ public interface BookInfoMapper {
 
 	List<Map<String, String>> querybookShelfList();
 
-	void addBookShell(String shelfName);
+	void addBookShelf(String shelfName);
 
-	void deleteBookShell(String shelfType);
+	void deleteBookShelf(String shelfType);
 
-	void updateBookShell(Map<String, String> paramsMap);
+	void updateBookShelf(Map<String, String> paramsMap);
 
 	void addBookInfo(Map<String, String> paramsMap);
 
