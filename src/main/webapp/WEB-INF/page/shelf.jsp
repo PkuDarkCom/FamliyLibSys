@@ -98,7 +98,7 @@
 			});
 			// 新增书架
 			$('#addShelf').on('click', '.btnadd', function () {
-				var shelfName = $(this).find('input').val();
+				var shelfName = $('.addshelf-box').find('input').val();
 				$.ajax({
 		            url: '/book/addBookShelf', // 待修改
 		            method: 'post',
@@ -126,13 +126,11 @@
 			$('#shelfInfo').on('click', '.delete', function (e) {
 				var $this = $(e.target);
 				var shelfType = $this.data('type');
-				var shelfName = $this.parents('.form-group').find('input').val();
 				$.ajax({
 		            url: '/book/modifyBookShelf', // 待修改
 		            method: 'post',
 		            data: {
-		            	shelfType: shelfType,
-		            	shelfName: shelfName
+		            	shelfType: shelfType
 		            },
 		            dataType: 'json',
 		            success: function (resp) {
