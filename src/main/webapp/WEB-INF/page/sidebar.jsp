@@ -35,19 +35,19 @@
 		</header>
 		<ul id="main-menu" class="main-menu">
 			<%
-				String active = request.getParameter('active');  
+				String active = request.getParameter("active");  
 			%>
-			<li <%if(active=='index') {%>class="active"<%}%>>
+			<li <%if(active=="index") {%>class="active"<%}%>>
 				<a href="/book/bookList">
 					<i class="linecons-cog"></i>
 					<span class="title">首页</span>
 				</a>
 			</li>
-			<li class="<%if(active=='detail' || active=='addBook') { %>opened<%}%> <%if(active=='index'){ %>active<%}%>">
+			<li class='<%if(active=="detail" || active=="addBook") { %>opened<%}%> <%if(active=="index"){ %>active<%}%>'>
 				<i class="linecons-desktop"></i>
 				<span class="title">图书管理</span>
 				<ul>
-					<li <%if(active=='addBook') {%>class="active"<%}%>>
+					<li <%if(active=="addBook") {%>class="active"<%}%>>
 						<a href="/book/addBookPre">新增图书</a>
 					</li>
 					<!-- <li>
@@ -55,13 +55,13 @@
 					</li> -->
 				</ul>
 			</li>
-			<li <%if(active=='shelf') {%>class="active"<%}%>>
+			<li <%if(active=="shelf") {%>class="active"<%}%>>
 				<a href="/book/bookShelfPre">
 					<i class="linecons-note"></i>
 					<span class="title">书架管理</span>
 				</a>
 			</li>
-            <li <%if(active=='statistics') {%>class="active"<%}%>>
+            <li <%if(active=="statistics") {%>class="active"<%}%>>
                 <a href="/read/readInfoStatPage">
                     <i class="linecons-note"></i>
                     <span class="title">阅读信息统计</span>

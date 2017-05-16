@@ -41,10 +41,11 @@
 <body class="page-body">
 	<div class="page-container">
 		<!-- 左侧菜单 -->
-		<jsp:include page="sidebar.jsp"></jsp:include>
+		<jsp:include page="sidebar.jsp">
+			<jsp:param value="index" name="active"/>
+		</jsp:include>
 		<div class="main-content">
 			<jsp:include page="userinfo.jsp">
-				<jsp:param value="index" name="active"/>
 			</jsp:include>
 			<!-- 图书列表 -->
 			<div class="panel panel-default panel-headerless">
