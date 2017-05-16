@@ -25,62 +25,6 @@ $(document).ready(function ($) {
 	    },
 	    // 获取图书列表
 	    getList: function(condition) {
-	        // 模拟接口返回
-	        // var resp = {
-	        //  code: 1,
-	        //  msg: '成功',
-	        //  data: [{
-	        //      image: 'https://img1.doubanio.com/lpic/s29402699.jpg',
-	        //      bookTitle: 'javascript 框架设计',
-	        //      author: '司徒正美',
-	        //      brief: '框架设计框架设计框架设计框架设计框架设计'
-	        //  },
-	        //  {
-	        //      image: 'https://img1.doubanio.com/lpic/s29402699.jpg',
-	        //      bookTitle: '高性能网站建设',
-	        //      author: 'Steve Souders',
-	        //      brief: '高性能网站建设高性能网站建设高性能网站建设'
-	        //  },
-	        //  {
-	        //      image: 'https://img1.doubanio.com/lpic/s29402699.jpg',
-	        //      bookTitle: 'javascript 框架设计',
-	        //      author: '司徒正美',
-	        //      brief: '框架设计框架设计框架设计框架设计框架设计'
-	        //  },
-	        //  {
-	        //      image: 'https://img1.doubanio.com/lpic/s29402699.jpg',
-	        //      bookTitle: '高性能网站建设',
-	        //      author: 'Steve Souders',
-	        //      brief: '高性能网站建设高性能网站建设高性能网站建设'
-	        //  },
-	        //  {
-	        //      image: 'https://img1.doubanio.com/lpic/s29402699.jpg',
-	        //      bookTitle: 'javascript 框架设计',
-	        //      author: '司徒正美',
-	        //      brief: '框架设计框架设计框架设计框架设计框架设计'
-	        //  },
-	        //  {
-	        //      image: 'https://img1.doubanio.com/lpic/s29402699.jpg',
-	        //      bookTitle: '高性能网站建设',
-	        //      author: 'Steve Souders',
-	        //      brief: '高性能网站建设高性能网站建设高性能网站建设'
-	        //  },
-	        //  {
-	        //      image: 'https://img1.doubanio.com/lpic/s29402699.jpg',
-	        //      bookTitle: 'javascript 框架设计',
-	        //      author: '司徒正美',
-	        //      brief: '框架设计框架设计框架设计框架设计框架设计'
-	        //  },
-	        //  {
-	        //      image: 'https://img1.doubanio.com/lpic/s29402699.jpg',
-	        //      bookTitle: '高性能网站建设',
-	        //      author: 'Steve Souders',
-	        //      brief: '高性能网站建设高性能网站建设高性能网站建设'
-	        //  }]
-	        // }
-	        // var booksTemplate = Handlebars.compile($("#booksTemplate").html());
-	        // $('#bookList').html(booksTemplate(resp));
-	        // return false;
 	        $.ajax({
 	            url: '/book/bookListData',
 	            method: 'get',

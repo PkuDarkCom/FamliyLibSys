@@ -98,30 +98,12 @@
 			});
 			// 新增书架
 			$('#addShelf').on('click', '.btnadd', function () {
-				var shelfNm = $(this).find('input').val();
-				/* 联调时从这里注释*/
-				/* var resp = {
-					"code": 1,
-		            "msg": "查询成功",
-		            "data": {
-		            	"shelfType": "04",
-		                "shelfName": "阳台"
-		            }
-				};
-				$('#shelfInfo').append(shelfTemplate({
-					data:[{
-		            	"shelfType": resp.data.shelfType,
-		                "shelfName": resp.data.shelfName
-		            }]
-				}));
-				$('#addShelf').html('');
-				return false; */
-				/* 联调时注释到这截止*/
+				var shelfName = $(this).find('input').val();
 				$.ajax({
-		            url: '/book/bookShelfList', // 待修改
+		            url: '/book/addBookShelf', // 待修改
 		            method: 'post',
 		            data: {
-		            	shelfNm: shelfNm
+		            	shelfName: shelfName
 		            },
 		            dataType: 'json',
 		            success: function (resp) {
@@ -144,12 +126,13 @@
 			$('#shelfInfo').on('click', '.delete', function (e) {
 				var $this = $(e.target);
 				var shelfType = $this.data('type');
-				//$this.parents('.form-group').remove(); // 联调时注释这一行
+				var shelfName = $this.parents('.form-group').find('input').val();
 				$.ajax({
-		            url: '/book/bookShelfList', // 待修改
+		            url: '/book/modifyBookShelf', // 待修改
 		            method: 'post',
 		            data: {
-		            	shelfType: shelfType
+		            	shelfType: shelfType,
+		            	shelfName: shelfName
 		            },
 		            dataType: 'json',
 		            success: function (resp) {
@@ -168,7 +151,7 @@
 				var shelfType = $this.data('type');
 				var shelfName = $this.parents('.form-group').find('input').val();
 				$.ajax({
-		            url: '/book/bookShelfList', // 待修改
+		            url: '/book/modifyBookShelf', // 待修改
 		            method: 'post',
 		            data: {
 		            	shelfName: shelfName,
@@ -186,28 +169,7 @@
 		        });
 			});
 			// 获取书架
-			/* function getShelf(defaultOption) {
-		        var resp = {
-		            "code": 1,
-		            "msg": "查询成功",
-		            "data": [
-		                {
-		                    "shelfType": "01",
-		                    "shelfName": "书房"
-		                },
-		                {
-		                    "shelfType": "02",
-		                    "shelfName": "客厅"
-		                },
-		                {
-		                    "shelfType": "03",
-		                    "shelfName": "卧室"
-		                }
-		            ]
-		        };
-				$('#shelfInfo').html(shelfTemplate(resp));
-		        return false; */
-		        
+		    function getShelf(defaultOption) {    
 		        $.ajax({
 		            url: '/book/bookShelfList',
 		            method: 'get',
