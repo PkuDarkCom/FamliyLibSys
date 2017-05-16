@@ -124,7 +124,7 @@
 			var $bookInfo = $('#bookInfo');
 			request.getShelf('请选择书架'); // 获取书架信息
 			// 下拉框插件化
-			var selectArray = ['ebook-select', 'shelf-select'];
+			var selectArray = ['ebook-select'];
 			for (var i = 0; i < selectArray.length; i++) {
 				$('#' + selectArray[i]).selectBoxIt({
 					showFirstOption: false
