@@ -19,7 +19,9 @@
 	<body class="page-body">
         <div class="page-container">
             <!-- 左侧菜单 -->
-            <jsp:include page="sidebar.jsp"></jsp:include>
+            <jsp:include page="sidebar.jsp">
+                <jsp:param value="statistics" name="active"/>
+            </jsp:include>
             <div class="main-content">
                 <!--<jsp:include page="userinfo.jsp"></jsp:include>-->
                 <div class="panel panel-default panel-headerless">

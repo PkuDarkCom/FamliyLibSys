@@ -32,7 +32,9 @@
 <body class="page-body">
 	<div class="page-container">
 		<!-- 左侧菜单 -->
-		<jsp:include page="sidebar.jsp"></jsp:include>
+		<jsp:include page="sidebar.jsp">
+			<jsp:param value="addBook" name="active"/>
+		</jsp:include>
 		<div class="main-content">
 			<div class="panel panel-default panel-headerless">
 				<div class="panel-body layout-variants">

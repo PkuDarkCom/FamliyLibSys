@@ -29,7 +29,9 @@
 </head>
 <body class="page-body">
 	<div class="page-container">
-		<jsp:include page="sidebar.jsp"></jsp:include>
+		<jsp:include page="sidebar.jsp">
+			<jsp:param value="shelf" name="active"/>
+		</jsp:include>
 		<div class="main-content">
 			<div class="panel panel-default panel-headerless">
 				<div class="panel-body layout-variants">

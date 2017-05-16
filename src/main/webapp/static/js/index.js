@@ -10,7 +10,7 @@ $(document).ready(function ($) {
             shelfType: $.trim($('#shelf-select').val()) || '',
             searchContent: $.trim($('#searchContent').val()) || ''
         };
-        if (condition.shelfType || condition.searchContent) {
+        if (condition.searchContent) {
             alert('请输入图书信息或选择书架');
             return false;
         }

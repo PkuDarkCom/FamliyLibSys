@@ -35,7 +35,9 @@
 <body class="page-body">
 	<div class="page-container">
 		<!-- 左侧菜单 -->
-		<jsp:include page="sidebar.jsp"></jsp:include>
+		<jsp:include page="sidebar.jsp">
+			<jsp:param value="detail" name="active"/>
+		</jsp:include>
 		<div class="main-content">
 			<!-- 在这里引入userinfo.jsp -->
 			<div class="panel panel-default">
